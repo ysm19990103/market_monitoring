@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "incretin-watch"
+version = "0.1.0"
+description = "Primary-source incretin intelligence with auditable evidence and persistent deduplication"
+requires-python = ">=3.11"
+dependencies = ["beautifulsoup4>=4.12,<5", "feedparser>=6.0,<7", "python-dateutil>=2.9,<3", "pypdf>=5,<7"]
+
+[project.scripts]
+incretin-watch = "incretin_watch.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

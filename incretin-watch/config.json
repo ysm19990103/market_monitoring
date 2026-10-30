@@ -1,0 +1,393 @@
+{
+  "config_version": 1,
+  "timezone": "Asia/Shanghai",
+  "workers": 4,
+  "lookback_days": 14,
+  "min_priority": 35,
+  "max_model_events": 15,
+  "focus_companies": [
+    "Eli Lilly",
+    "Novo Nordisk"
+  ],
+  "catalog_reviewed": "2026-10-30",
+  "catalog_note": "重点产品曾在至少一个市场获批；不是全球各地区、剂型、适应证的实时批准清单。在研/竞品词仅用于竞争背景发现，不由本配置推定上市状态。",
+  "products": [
+    {
+      "ingredient": "tirzepatide",
+      "company": "Eli Lilly",
+      "aliases": [
+        "tirzepatide",
+        "替尔泊肽",
+        "チルゼパチド"
+      ],
+      "brands": [
+        "Mounjaro",
+        "Zepbound",
+        "穆峰达"
+      ],
+      "scope": "marketed_focus"
+    },
+    {
+      "ingredient": "dulaglutide",
+      "company": "Eli Lilly",
+      "aliases": [
+        "dulaglutide",
+        "度拉糖肽",
+        "デュラグルチド"
+      ],
+      "brands": [
+        "Trulicity",
+        "度易达"
+      ],
+      "scope": "marketed_focus"
+    },
+    {
+      "ingredient": "orforglipron",
+      "company": "Eli Lilly",
+      "aliases": [
+        "orforglipron",
+        "奥福格列隆"
+      ],
+      "brands": [
+        "Foundayo"
+      ],
+      "scope": "marketed_focus"
+    },
+    {
+      "ingredient": "semaglutide",
+      "company": "Novo Nordisk",
+      "aliases": [
+        "semaglutide",
+        "司美格鲁肽",
+        "semaglutida",
+        "セマグルチド"
+      ],
+      "brands": [
+        "Ozempic",
+        "Wegovy",
+        "Rybelsus",
+        "诺和泰",
+        "诺和盈",
+        "诺和忻",
+        "リベルサス",
+        "ウゴービ"
+      ],
+      "scope": "marketed_focus"
+    },
+    {
+      "ingredient": "liraglutide",
+      "company": "Novo Nordisk",
+      "aliases": [
+        "liraglutide",
+        "利拉鲁肽",
+        "liraglutida",
+        "リラグルチド"
+      ],
+      "brands": [
+        "Victoza",
+        "Saxenda",
+        "Xultophy",
+        "诺和力",
+        "善纤达"
+      ],
+      "scope": "marketed_focus"
+    },
+    {
+      "ingredient": "exenatide",
+      "company": "Competitor",
+      "aliases": [
+        "exenatide",
+        "艾塞那肽"
+      ],
+      "brands": [
+        "Byetta",
+        "Bydureon"
+      ],
+      "scope": "competitive_context"
+    },
+    {
+      "ingredient": "lixisenatide",
+      "company": "Competitor",
+      "aliases": [
+        "lixisenatide",
+        "利司那肽"
+      ],
+      "brands": [
+        "Adlyxin",
+        "Lyxumia",
+        "Soliqua",
+        "Suliqua"
+      ],
+      "scope": "competitive_context"
+    },
+    {
+      "ingredient": "mazdutide",
+      "company": "Competitor",
+      "aliases": [
+        "mazdutide",
+        "玛仕度肽"
+      ],
+      "brands": [
+        "信尔美"
+      ],
+      "scope": "competitive_context"
+    },
+    {
+      "ingredient": "ecnoglutide",
+      "company": "Competitor",
+      "aliases": [
+        "ecnoglutide",
+        "埃诺格鲁肽"
+      ],
+      "brands": [],
+      "scope": "competitive_context"
+    },
+    {
+      "ingredient": "beinaglutide",
+      "company": "Competitor",
+      "aliases": [
+        "beinaglutide",
+        "benaglutide",
+        "贝那鲁肽"
+      ],
+      "brands": [],
+      "scope": "competitive_context"
+    },
+    {
+      "ingredient": "retatrutide",
+      "company": "Eli Lilly",
+      "aliases": [
+        "retatrutide",
+        "瑞他鲁肽"
+      ],
+      "brands": [],
+      "scope": "competitive_context"
+    },
+    {
+      "ingredient": "cagrisema",
+      "company": "Novo Nordisk",
+      "aliases": [
+        "CagriSema",
+        "cagrilintide"
+      ],
+      "brands": [],
+      "scope": "competitive_context"
+    },
+    {
+      "ingredient": "amycretin",
+      "company": "Novo Nordisk",
+      "aliases": [
+        "amycretin"
+      ],
+      "brands": [],
+      "scope": "competitive_context"
+    },
+    {
+      "ingredient": "maritide",
+      "company": "Competitor",
+      "aliases": [
+        "MariTide",
+        "maridebart cafraglutide"
+      ],
+      "brands": [],
+      "scope": "competitive_context"
+    },
+    {
+      "ingredient": "survodutide",
+      "company": "Competitor",
+      "aliases": [
+        "survodutide"
+      ],
+      "brands": [],
+      "scope": "competitive_context"
+    },
+    {
+      "ingredient": "vk2735",
+      "company": "Competitor",
+      "aliases": [
+        "VK2735"
+      ],
+      "brands": [],
+      "scope": "competitive_context"
+    }
+  ],
+  "class_terms": [
+    "GLP-1",
+    "GLP1",
+    "GIP/GLP-1",
+    "incretin",
+    "肠促胰素",
+    "胰高血糖素样肽-1",
+    "GLP-1受容体"
+  ],
+  "allowed_domains": [
+    "lilly.com",
+    "lilly.gcs-web.com",
+    "novonordisk.com",
+    "novonordisk-us.com",
+    "fda.gov",
+    "ema.europa.eu",
+    "gov.uk",
+    "nmpa.gov.cn",
+    "pmda.go.jp",
+    "mhlw.go.jp",
+    "tga.gov.au",
+    "recalls-rappels.canada.ca",
+    "canada.ca",
+    "gov.br",
+    "cms.gov",
+    "ebi.ac.uk",
+    "pubmed.ncbi.nlm.nih.gov"
+  ],
+  "sources": [
+    {
+      "id": "lilly",
+      "name": "Eli Lilly 官方公告",
+      "url": "https://investor.lilly.com/rss/news-releases.xml?items=100",
+      "kind": "rss",
+      "region": "Global",
+      "type": "company"
+    },
+    {
+      "id": "novo",
+      "name": "Novo Nordisk 官方公告",
+      "url": "https://www.novonordisk.com/bin/nncorp/news-search",
+      "kind": "novo",
+      "region": "Global",
+      "type": "company"
+    },
+    {
+      "id": "fda_press",
+      "name": "FDA 新闻公告",
+      "url": "https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/press-releases/rss.xml",
+      "kind": "rss",
+      "region": "US",
+      "type": "regulator"
+    },
+    {
+      "id": "fda_safety",
+      "name": "FDA 药物安全通报",
+      "url": "https://www.fda.gov/drugs/drug-safety-and-availability/drug-safety-communications",
+      "kind": "html",
+      "region": "US",
+      "type": "regulator",
+      "selector": "main a[href]",
+      "link_pattern": "/drugs/(drug-safety-and-availability|drug-safety-communications)/"
+    },
+    {
+      "id": "fda_compounding",
+      "name": "FDA GLP-1 配制药政策",
+      "url": "https://www.fda.gov/drugs/drug-alerts-and-statements/fda-clarifies-policies-compounders-national-glp-1-supply-begins-stabilize",
+      "kind": "page",
+      "region": "US",
+      "type": "regulator"
+    },
+    {
+      "id": "fda_unapproved",
+      "name": "FDA 未获批 GLP-1 风险",
+      "url": "https://www.fda.gov/drugs/drug-alerts-and-statements/fdas-concerns-unapproved-glp-1-drugs-used-weight-loss",
+      "kind": "page",
+      "region": "US",
+      "type": "regulator"
+    },
+    {
+      "id": "ema_news",
+      "name": "EMA 新闻与安全信息",
+      "url": "https://www.ema.europa.eu/en/news.xml",
+      "kind": "rss",
+      "region": "EU",
+      "type": "regulator"
+    },
+    {
+      "id": "ema_medicines",
+      "name": "EMA EPAR 与审评意见",
+      "url": "https://www.ema.europa.eu/en/human-medicine-new.xml",
+      "kind": "rss",
+      "region": "EU",
+      "type": "regulator"
+    },
+    {
+      "id": "mhra_safety",
+      "name": "MHRA Drug Safety Update",
+      "url": "https://www.gov.uk/drug-safety-update.atom",
+      "kind": "rss",
+      "region": "UK",
+      "type": "regulator"
+    },
+    {
+      "id": "mhra_news",
+      "name": "MHRA 官方消息",
+      "url": "https://www.gov.uk/government/organisations/medicines-and-healthcare-products-regulatory-agency.atom",
+      "kind": "rss",
+      "region": "UK",
+      "type": "regulator"
+    },
+    {
+      "id": "nmpa",
+      "name": "NMPA 药品监管动态",
+      "url": "https://www.nmpa.gov.cn/yaopin/ypjgdt/index.html",
+      "kind": "html",
+      "region": "CN",
+      "type": "regulator",
+      "selector": "a[href]",
+      "link_pattern": "/\\d{15,}\\.html"
+    },
+    {
+      "id": "pmda",
+      "name": "PMDA 药品安全通知",
+      "url": "https://www.pmda.go.jp/safety/info-services/drugs/0010.html",
+      "kind": "html",
+      "region": "JP",
+      "type": "regulator",
+      "selector": "a[href]",
+      "link_pattern": "(files|\\.pdf|safety)"
+    },
+    {
+      "id": "tga",
+      "name": "TGA 安全更新",
+      "url": "https://www.tga.gov.au/news/safety-updates",
+      "kind": "html",
+      "region": "AU",
+      "type": "regulator",
+      "selector": "main a[href]",
+      "link_pattern": "/news/(safety-updates|safety-alerts)/"
+    },
+    {
+      "id": "health_canada",
+      "name": "Health Canada 安全通报",
+      "url": "https://recalls-rappels.canada.ca/en/feed/health-products-alerts-recalls",
+      "kind": "rss",
+      "region": "CA",
+      "type": "regulator"
+    },
+    {
+      "id": "anvisa",
+      "name": "ANVISA 官方新闻",
+      "url": "https://www.gov.br/anvisa/pt-br/comunicacao/noticias",
+      "kind": "html",
+      "region": "BR",
+      "type": "regulator",
+      "selector": "main a[href], article a[href]",
+      "link_pattern": "/(noticias|noticias-anvisa)/[^/]+"
+    },
+    {
+      "id": "cms",
+      "name": "CMS 官方政策公告",
+      "url": "https://www.cms.gov/newsroom",
+      "kind": "html",
+      "region": "US",
+      "type": "regulator",
+      "selector": "main a[href]",
+      "link_pattern": "/newsroom/(press-releases|fact-sheets)/"
+    },
+    {
+      "id": "europepmc",
+      "name": "Europe PMC / PubMed 原始研究",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+      "kind": "europepmc",
+      "region": "Global",
+      "type": "research",
+      "max_pages": 6
+    }
+  ]
+}
