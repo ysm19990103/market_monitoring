@@ -200,10 +200,11 @@
     "name": "TGA 安全更新",
     "region": "AU",
     "url": "https://www.tga.gov.au/news/safety-updates",
-    "status": "failed",
-    "discovered": 0,
+    "status": "partial",
+    "discovered": 1,
     "accepted": 0,
-    "warnings": [],
-    "error": "FetchError: HTTP 503"
+    "warnings": [
+      "current listing only; no claim of exhaustive regional coverage"
+    ]
   }
 ]
