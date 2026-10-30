@@ -1,4 +1,4 @@
-# Research automation
+# Market monitoring
 
 ## 全球肠促胰素药物进展
 
@@ -7,6 +7,8 @@
 - [最新简报](incretin-watch/reports/latest.md)
 - [结构化结果](incretin-watch/reports/latest.json)
 - [CSV](incretin-watch/reports/latest.csv)
-- [每日自动运行](../../actions/workflows/incretin-watch.yml)
+- [每日自动运行](https://github.com/ysm19990103/market_monitoring/actions/workflows/incretin-watch.yml)
 
 这是资料整理与研究辅助工具；来源覆盖、日期不确定性和分析模式均在输出中显示。
+
+See [security and privacy guidance](SECURITY.md) before adding credentials or new data sources.

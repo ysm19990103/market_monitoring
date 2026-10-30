@@ -31,8 +31,8 @@
 Python 3.11+，Linux/macOS（Windows 可使用 WSL）。
 
 ```bash
-git clone https://github.com/ysm19990103/202606_postgraduate_work.git
-cd 202606_postgraduate_work/incretin-watch
+git clone https://github.com/ysm19990103/market_monitoring.git
+cd market_monitoring/incretin-watch
 python -m venv .venv
 source .venv/bin/activate
 python -m pip install .
