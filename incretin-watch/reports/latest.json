@@ -1,11 +1,10 @@
 {
   "metadata": {
-    "generated_at": "2026-10-30T10:03:02+08:00",
+    "generated_at": "2026-10-30T13:52:28+08:00",
     "since": "2026-10-17",
     "until": "2026-10-30",
     "duplicates": 27,
-    "analysis_note": "本次使用无密钥规则模式：核心信息保留原文摘录，三维影响为条件性模板；尚未启用模型逐项中文综合。",
-    "model_calls": 0,
+    "analysis_note": "本次使用本地规则分析：核心信息保留原文摘录，三维影响为条件性模板，仍需人工复核。",
     "coverage_complete": false,
     "scope": "configured official sources and indexed primary literature"
   },

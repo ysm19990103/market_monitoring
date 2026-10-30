@@ -1,0 +1,244 @@
+{
+  "metadata": {
+    "generated_at": "2026-10-30T13:52:28+08:00",
+    "since": "2026-10-17",
+    "until": "2026-10-30",
+    "duplicates": 27,
+    "analysis_note": "本次使用本地规则分析：核心信息保留原文摘录，三维影响为条件性模板，仍需人工复核。",
+    "coverage_complete": false,
+    "scope": "configured official sources and indexed primary literature"
+  },
+  "events": [],
+  "coverage": [
+    {
+      "id": "anvisa",
+      "name": "ANVISA 官方新闻",
+      "region": "BR",
+      "url": "https://www.gov.br/anvisa/pt-br/comunicacao/noticias",
+      "status": "failed",
+      "discovered": 0,
+      "accepted": 0,
+      "warnings": [],
+      "error": "FetchError: no links matched article pattern: source layout may have changed"
+    },
+    {
+      "id": "cms",
+      "name": "CMS 官方政策公告",
+      "region": "US",
+      "url": "https://www.cms.gov/newsroom",
+      "status": "partial",
+      "discovered": 0,
+      "accepted": 0,
+      "warnings": [
+        "current listing only; no claim of exhaustive regional coverage"
+      ]
+    },
+    {
+      "id": "ema_medicines",
+      "name": "EMA EPAR 与审评意见",
+      "region": "EU",
+      "url": "https://www.ema.europa.eu/en/human-medicine-new.xml",
+      "status": "partial",
+      "discovered": 243,
+      "accepted": 2,
+      "warnings": [
+        "article fetch failed: https://www.ema.europa.eu/en/medicines/human/EPAR/wegovy (FetchError)",
+        "article fetch failed: https://www.ema.europa.eu/en/medicines/human/EPAR/victoza (FetchError)"
+      ]
+    },
+    {
+      "id": "ema_news",
+      "name": "EMA 新闻与安全信息",
+      "region": "EU",
+      "url": "https://www.ema.europa.eu/en/news.xml",
+      "status": "ok",
+      "discovered": 12,
+      "accepted": 0,
+      "warnings": []
+    },
+    {
+      "id": "europepmc",
+      "name": "Europe PMC / PubMed 原始研究",
+      "region": "Global",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+      "status": "ok",
+      "discovered": 178,
+      "accepted": 42,
+      "warnings": []
+    },
+    {
+      "id": "fda_compounding",
+      "name": "FDA GLP-1 配制药政策",
+      "region": "US",
+      "url": "https://www.fda.gov/drugs/drug-alerts-and-statements/fda-clarifies-policies-compounders-national-glp-1-supply-begins-stabilize",
+      "status": "ok",
+      "discovered": 1,
+      "accepted": 1,
+      "warnings": []
+    },
+    {
+      "id": "fda_press",
+      "name": "FDA 新闻公告",
+      "region": "US",
+      "url": "https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/press-releases/rss.xml",
+      "status": "partial",
+      "discovered": 20,
+      "accepted": 0,
+      "warnings": [
+        "rejected off-domain article link",
+        "rejected off-domain article link",
+        "rejected off-domain article link",
+        "rejected off-domain article link",
+        "rejected off-domain article link",
+        "rejected off-domain article link",
+        "rejected off-domain article link",
+        "rejected off-domain article link",
+        "rejected off-domain article link",
+        "rejected off-domain article link",
+        "rejected off-domain article link",
+        "rejected off-domain article link",
+        "rejected off-domain article link",
+        "rejected off-domain article link",
+        "rejected off-domain article link",
+        "rejected off-domain article link",
+        "rejected off-domain article link",
+        "rejected off-domain article link",
+        "rejected off-domain article link",
+        "rejected off-domain article link"
+      ]
+    },
+    {
+      "id": "fda_safety",
+      "name": "FDA 药物安全通报",
+      "region": "US",
+      "url": "https://www.fda.gov/drugs/drug-safety-and-availability/drug-safety-communications",
+      "status": "partial",
+      "discovered": 1,
+      "accepted": 1,
+      "warnings": [
+        "current listing only; no claim of exhaustive regional coverage"
+      ]
+    },
+    {
+      "id": "fda_unapproved",
+      "name": "FDA 未获批 GLP-1 风险",
+      "region": "US",
+      "url": "https://www.fda.gov/drugs/drug-alerts-and-statements/fdas-concerns-unapproved-glp-1-drugs-used-weight-loss",
+      "status": "ok",
+      "discovered": 1,
+      "accepted": 1,
+      "warnings": []
+    },
+    {
+      "id": "health_canada",
+      "name": "Health Canada 安全通报",
+      "region": "CA",
+      "url": "https://recalls-rappels.canada.ca/en/feed/health-products-alerts-recalls",
+      "status": "partial",
+      "discovered": 3,
+      "accepted": 0,
+      "warnings": [
+        "feed window shorter than requested lookback; archives not exhaustively searched"
+      ]
+    },
+    {
+      "id": "lilly",
+      "name": "Eli Lilly 官方公告",
+      "region": "Global",
+      "url": "https://investor.lilly.com/rss/news-releases.xml?items=100",
+      "status": "ok",
+      "discovered": 10,
+      "accepted": 2,
+      "warnings": []
+    },
+    {
+      "id": "mhra_news",
+      "name": "MHRA 官方消息",
+      "region": "UK",
+      "url": "https://www.gov.uk/government/organisations/medicines-and-healthcare-products-regulatory-agency.atom",
+      "status": "partial",
+      "discovered": 20,
+      "accepted": 0,
+      "warnings": [
+        "feed window shorter than requested lookback; archives not exhaustively searched"
+      ]
+    },
+    {
+      "id": "mhra_safety",
+      "name": "MHRA Drug Safety Update",
+      "region": "UK",
+      "url": "https://www.gov.uk/drug-safety-update.atom",
+      "status": "ok",
+      "discovered": 50,
+      "accepted": 0,
+      "warnings": []
+    },
+    {
+      "id": "nmpa",
+      "name": "NMPA 药品监管动态",
+      "region": "CN",
+      "url": "https://www.nmpa.gov.cn/yaopin/ypjgdt/index.html",
+      "status": "failed",
+      "discovered": 0,
+      "accepted": 0,
+      "warnings": [],
+      "error": "FetchError: HTTP 412"
+    },
+    {
+      "id": "novo",
+      "name": "Novo Nordisk 官方公告",
+      "region": "Global",
+      "url": "https://www.novonordisk.com/bin/nncorp/news-search",
+      "status": "ok",
+      "discovered": 3,
+      "accepted": 3,
+      "warnings": []
+    },
+    {
+      "id": "pmda",
+      "name": "PMDA 药品安全通知",
+      "region": "JP",
+      "url": "https://www.pmda.go.jp/safety/info-services/drugs/0010.html",
+      "status": "partial",
+      "discovered": 4,
+      "accepted": 0,
+      "warnings": [
+        "current listing only; no claim of exhaustive regional coverage"
+      ]
+    },
+    {
+      "id": "tga",
+      "name": "TGA 安全更新",
+      "region": "AU",
+      "url": "https://www.tga.gov.au/news/safety-updates",
+      "status": "partial",
+      "discovered": 1,
+      "accepted": 0,
+      "warnings": [
+        "current listing only; no claim of exhaustive regional coverage"
+      ]
+    }
+  ],
+  "review_queue": [
+    {
+      "title": "Human medicines European public assessment report (EPAR): Victoza, liraglutide, Date of authorisation: 30/06/2009, Revision: 26, Status: Authorised",
+      "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/victoza",
+      "reason": "full article or abstract unavailable; retry next run"
+    },
+    {
+      "title": "Human medicines European public assessment report (EPAR): Wegovy, semaglutide, Date of authorisation: 06/01/2022, Revision: 20, Status: Authorised",
+      "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/wegovy",
+      "reason": "full article or abstract unavailable; retry next run"
+    },
+    {
+      "title": "GLP-1s and criminality: US trial will test whether semaglutide can fight crime.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42901618",
+      "reason": "full article or abstract unavailable; retry next run"
+    },
+    {
+      "title": "Semaglutide and Panic Attacks: Active-Comparator Disproportionality Analysis, Temporal Assessment of Notoriety Bias and Evidence Triangulation in Post-Marketing Pharmacovigilance.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42946127",
+      "reason": "publication date is in the future"
+    }
+  ]
+}
