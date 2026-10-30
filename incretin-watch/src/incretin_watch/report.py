@@ -31,7 +31,7 @@ def render(groups: list[dict], health: list[dict], review: list[dict], metadata:
            f"检索窗口：{metadata['since']} 至 {metadata['until']}；新事件/实质更新 {len(groups)} 条；抑制重复 {metadata['duplicates']} 条。", "",
            "重点为礼来、诺和诺德已上市产品；其他药物仅作竞争背景。不同司法辖区、品牌、剂型和适应证分别判断。", "",
            "**阅读规则：**“来源记载”反映监管文件、公司披露或研究报告中的内容；公司声明和观察性关联不自动成为独立证实的事实。"
-           "三个影响维度均为待验证的分析，不能与事实混读。规则模式保留原文短摘录，模型模式提供中文归纳；两者均需复核。", ""]
+           "三个影响维度均为待验证的分析，不能与事实混读。程序保留原文短摘录，并提供本地规则分析；内容均需复核。", ""]
     if metadata.get("analysis_note"):
         out += [md(metadata["analysis_note"]), ""]
     if not groups:
@@ -40,7 +40,7 @@ def render(groups: list[dict], health: list[dict], review: list[dict], metadata:
         r, a = g["representative"], g["analysis"]
         heading = a.get("title_zh") or r["title"]
         out += [f"## {i}. {md(heading)}", "",
-                f"类别：{' / '.join(labels.get(c,c) for c in r['categories'])}；分析模式：{'模型辅助，待复核' if a['mode']=='llm' else '规则模板，待复核'}；优先分：{r['priority']}。", "",
+                f"类别：{' / '.join(labels.get(c,c) for c in r['categories'])}；分析模式：规则模板，待复核；优先分：{r['priority']}。", "",
                 "| 字段 | 信息 |", "|---|---|",
                 f"| 事件日期 | {md(a.get('event_date') or r.get('event_date') or '未核实')} |",
                 f"| 日期依据 | {md(a.get('event_date_evidence') or r['event_date_basis'])} |",

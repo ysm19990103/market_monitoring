@@ -4,7 +4,6 @@
   "workers": 4,
   "lookback_days": 14,
   "min_priority": 35,
-  "max_model_events": 15,
   "focus_companies": [
     "Eli Lilly",
     "Novo Nordisk"

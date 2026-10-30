@@ -5,7 +5,8 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
-from incretin_watch.analyze import rules, validate
+from incretin_watch.analyze import rules
+from incretin_watch.cli import main
 from incretin_watch.collect import collect_source, extract_page, feed_records, html_records, literature, novo_news
 from incretin_watch.common import canonical_url, digest, matches, parse_date
 from incretin_watch.events import classify, mark_emitted, prepare, same_event, stage_events
@@ -94,29 +95,6 @@ class EvidenceTests(unittest.TestCase):
         self.assertEqual(a["mode"], "rules")
         self.assertTrue(a["needs_review"])
         self.assertEqual(len(a["impacts"]), 3)
-
-    def test_fabricated_model_evidence_rejected(self):
-        r = prepare(record(), CONFIG)
-        group = {"representative": r, "sources": [r]}
-        a = rules(group)
-        a["facts"][0]["evidence"] = "The FDA has approved this product in every country."
-        with self.assertRaises(ValueError):
-            validate(a, group)
-
-    def test_model_unknown_source_rejected(self):
-        r = prepare(record(), CONFIG)
-        g = {"representative": r, "sources": [r]}
-        a = rules(g)
-        a["facts"][0]["source_id"] = "S99"
-        with self.assertRaises(ValueError):
-            validate(a, g)
-
-    def test_unproved_event_date_cleared(self):
-        r = prepare(record(), CONFIG)
-        g = {"representative": r, "sources": [r]}
-        a = rules(g)
-        a.update(event_date="2026-10-22", event_date_evidence="invented")
-        self.assertIsNone(validate(a, g)["event_date"])
 
     def test_csv_formula_injection(self):
         self.assertTrue(safe_csv("=HYPERLINK(1)").startswith("'"))
@@ -228,6 +206,44 @@ class AdapterTests(unittest.TestCase):
         rows, _ = novo_news(Fake(), src, "2026-10-16", "2026-10-30")
         self.assertIn("?id=17", rows[0]["url"])
         self.assertEqual(rows[0]["published_date"], "2026-10-29")
+
+
+class CommandTests(unittest.TestCase):
+    def test_default_run_analyzes_locally_and_replay_deduplicates(self):
+        health = [{"id": "fda", "name": "FDA", "url": "https://www.fda.gov",
+                   "region": "US", "status": "ok", "accepted": 1, "warnings": []}]
+        with tempfile.TemporaryDirectory() as tmp:
+            base = Path(tmp)
+            args = ["--config", str(Path(__file__).parents[1] / "config.json"),
+                    "--state", str(base / "state.json"), "--output", str(base / "reports"),
+                    "--cache", str(base / "cache"), "--as-of", "2026-10-30"]
+            # Collection is supplied as a fixture; downstream analysis must be local.
+            with patch("incretin_watch.cli.collect", return_value=([record()], health)), \
+                 patch("urllib.request.urlopen", side_effect=AssertionError("Unexpected network call")), \
+                 patch("urllib.request.OpenerDirector.open", side_effect=AssertionError("Unexpected network call")), \
+                 patch("os.getenv", side_effect=AssertionError("Unexpected environment lookup")):
+                self.assertEqual(main(args), 0)
+                report = json.loads((base / "reports/latest.json").read_text())
+                self.assertEqual(len(report["events"]), 1)
+                event = report["events"][0]
+                self.assertEqual(event["analysis"]["mode"], "rules")
+                self.assertEqual(set(event["analysis"]["impacts"]),
+                                 {"competitiveness", "clinical_use", "future_market"})
+                self.assertEqual(event["sources"][0]["url"], record()["url"])
+                self.assertTrue(event["analysis"]["needs_review"])
+                self.assertIn("本地规则分析", (base / "reports/latest.md").read_text())
+                self.assertEqual(main(args + ["--analysis", "rules"]), 0)
+                replay = json.loads((base / "reports/latest.json").read_text())
+                self.assertEqual(replay["events"], [])
+                self.assertEqual(replay["metadata"]["duplicates"], 1)
+                self.assertEqual(len(json.loads((base / "state.json").read_text())["events"]), 1)
+
+    def test_unsupported_analysis_rejected_before_collection(self):
+        with patch("incretin_watch.cli.collect") as collect, patch("sys.stderr"):
+            with self.assertRaises(SystemExit) as caught:
+                main(["--analysis", "remote"])
+        self.assertEqual(caught.exception.code, 2)
+        collect.assert_not_called()
 
 
 if __name__ == "__main__":

@@ -2,13 +2,12 @@
 
 This repository contains software and reports derived from public sources. Keep personal, confidential, and patient-level data out of source files, reports, workflow logs, artifacts, issues, and pull requests.
 
-## API credentials
+## Credentials and local data
 
-- The optional model integration reads `OPENAI_API_KEY` from the environment. In GitHub Actions, configure it under **Settings → Secrets and variables → Actions → Repository secrets**.
-- `OPENAI_API_KEY` in source code and `${{ secrets.OPENAI_API_KEY }}` in a workflow are references, not credential values.
+- Collection uses the configured public sources, and event analysis runs locally. No external model integration or personal credential configuration is required.
 - Never place a real credential in a commit, example, configuration file, report, command argument, or log. Do not enable shell tracing or print environment variables in workflows.
 - The repository ignores common local environment and credential files. Ignore rules do not protect already tracked files or prevent a forced add; inspect staged changes before committing.
-- A secret reference in a workflow does not reveal its value to repository readers. Review changes to workflows and code that use credentials before allowing them to run.
+- The scheduled workflow uses GitHub's built-in repository authentication to save reports. It does not reference user-supplied secrets.
 
 ## Publication review
 

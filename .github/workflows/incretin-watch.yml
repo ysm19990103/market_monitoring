@@ -49,10 +49,8 @@ jobs:
       - name: Collect and report
         id: collect
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
           LOOKBACK_DAYS: ${{ inputs.lookback_days || '14' }}
-        run: incretin-watch --lookback-days "$LOOKBACK_DAYS" --analysis auto
+        run: incretin-watch --lookback-days "$LOOKBACK_DAYS" --analysis rules
       - name: Show report
         if: steps.collect.outcome == 'success'
         run: head -c 900000 reports/latest.md >> "$GITHUB_STEP_SUMMARY"

@@ -11,20 +11,11 @@
 - [来源健康状态](reports/coverage.json)：失败、窗口不足和文章正文获取失败均列出。
 - `state/state.json`：跨天、跨机器运行的去重状态。请与报告一起保留。
 
-## 两种分析模式
+## 分析方式
 
-**无需密钥即可运行。** `rules` 模式提取原文标题与短摘录，标明来源身份，按事件类别提供产品竞争力、临床应用、未来市场三个维度的条件性分析。原文摘录不会自动翻译；模板不等于针对每篇研究的专家精读。
+程序直接使用公开来源，无需配置个人凭据。事件分析在本地完成：保留原文标题与短摘录，标明来源身份，按事件类别提供产品竞争力、临床应用、未来市场三个维度的条件性分析。
 
-如需逐事件中文归纳，在仓库 Settings → Secrets and variables → Actions 中添加：
-
-| 位置 | 名称 | 内容 |
-|---|---|---|
-| Repository secret | `OPENAI_API_KEY` | 你的 OpenAI API 密钥 |
-| Repository variable | `OPENAI_MODEL` | 账户中可用、支持 Responses API 与 JSON Schema 的文本模型 ID |
-
-自动模式仅在这两项都存在时调用模型。每次最多分析 15 个事件，可在 `config.json` 修改；其余事件照常输出规则结果。无密钥不产生模型费用。模型模式会把所选公开来源的正文片段发送给 OpenAI；请求设置 `store: false`。**不要把密钥放入代码、配置、报告或 Issue。**
-
-模型生成的事实必须附有效来源 ID 和原文连续证据片段，程序校验引用是否存在；日期还需原文日期证据。模型拒绝、超时、输出不完整、引用校验失败均回退规则模式并在报告说明。引用匹配不能证明语义蕴含；中文归纳和分析仍需人工复核。本项目没有在仓库中预置密钥。
+原文摘录不会自动翻译；规则模板不等于针对每篇研究的专家精读。中文影响分析始终标为待验证的推断，日期与证据仍需人工复核。报告保留来源链接，便于逐项核对。
 
 ## 本地运行
 
@@ -45,9 +36,6 @@ incretin-watch --sources lilly,novo,fda_press,ema_news,europepmc --lookback-days
 
 # 单独历史回看，避免影响日常去重状态
 incretin-watch --as-of 2026-10-30 --lookback-days 14 --state .cache/backfill-state.json --output .cache/backfill-reports
-
-# 已在环境中设置 OPENAI_API_KEY 和 OPENAI_MODEL 后
-incretin-watch --analysis llm
 
 python -m unittest discover -s tests -v
 ```
@@ -99,5 +87,4 @@ GitHub Actions 需要仓库允许 Actions 和 `contents: write`；分支保护�
 - [EMA 官方 RSS 说明](https://www.ema.europa.eu/en/news-events/rss-feeds)
 - [Health Canada RSS 说明](https://recalls-rappels.canada.ca/en/rss-feeds)
 - [Europe PMC Web Service](https://europepmc.org/RestfulWebService)
-- [OpenAI Structured Outputs](https://developers.openai.com/api/docs/guides/structured-outputs)
 - [FDA Foundayo 批准公告](https://www.fda.gov/news-events/press-announcements/fda-approves-first-new-molecular-entity-under-national-priority-voucher-program)（用于确认词表中 2026 年新增产品）

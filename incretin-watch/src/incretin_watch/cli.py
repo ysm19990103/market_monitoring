@@ -2,12 +2,11 @@ from __future__ import annotations
 
 import argparse
 import fcntl
-import os
 from datetime import date, datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
-from .analyze import analyze
+from .analyze import rules
 from .collect import collect
 from .common import load_json, write_json
 from .events import mark_emitted, stage_events
@@ -24,7 +23,7 @@ def main(argv=None):
     p.add_argument("--lookback-days", type=int, default=None)
     p.add_argument("--as-of", type=date.fromisoformat, help="ISO date; defaults to Asia/Shanghai today")
     p.add_argument("--sources", help="comma-separated configured source IDs")
-    p.add_argument("--analysis", choices=["auto", "rules", "llm"], default="auto")
+    p.add_argument("--analysis", choices=["rules"], default="rules", help="local rule-based analysis")
     p.add_argument("--strict-coverage", action="store_true", help="nonzero exit on any partial/failed source")
     args = p.parse_args(argv)
     config = load_json(args.config, None)
@@ -39,9 +38,6 @@ def main(argv=None):
     selected = set(args.sources.split(",")) if args.sources else None
     if selected and selected - {s["id"] for s in config["sources"]}:
         p.error("unknown source ID")
-    key, model = os.getenv("OPENAI_API_KEY"), os.getenv("OPENAI_MODEL")
-    if args.analysis == "llm" and not (key and model):
-        p.error("llm mode requires OPENAI_API_KEY and OPENAI_MODEL; use rules for no-key mode")
     args.state.parent.mkdir(parents=True, exist_ok=True)
     # Lock is outside committed state. GitHub also serializes the entire job.
     args.cache.mkdir(parents=True, exist_ok=True)
@@ -62,22 +58,11 @@ def main(argv=None):
         groups, review, skipped = stage_events(rows, config, state, since.isoformat(), until.isoformat())
         # Do not acknowledge lower priority events as reported: future runs may promote them.
         groups = [g for g in groups if g["representative"]["priority"] >= config["min_priority"]]
-        warnings, used = [], 0
         for g in groups:
-            mode = args.analysis if used < config["max_model_events"] else "rules"
-            analysis, warning = analyze(g, mode, model, key)
-            g["analysis"] = analysis
-            if mode != "rules" and key and model:
-                used += 1
-            if warning:
-                warnings.append(warning)
-        note = ""
-        if not (key and model) or args.analysis == "rules":
-            note = "本次使用无密钥规则模式：核心信息保留原文摘录，三维影响为条件性模板；尚未启用模型逐项中文综合。"
-        if warnings:
-            note += f" {len(warnings)} 条模型分析失败或未通过证据检查，已标注为规则模式。"
+            g["analysis"] = rules(g)
+        note = "本次使用本地规则分析：核心信息保留原文摘录，三维影响为条件性模板，仍需人工复核。"
         metadata = {"generated_at": now.isoformat(timespec="seconds"), "since": since.isoformat(), "until": until.isoformat(),
-                    "duplicates": skipped, "analysis_note": note, "model_calls": used,
+                    "duplicates": skipped, "analysis_note": note,
                     "coverage_complete": False, "scope": "configured official sources and indexed primary literature"}
         run_id = now.strftime("%H%M%S-%f")
         write_reports(args.output, run_id, groups, health, review, metadata)
