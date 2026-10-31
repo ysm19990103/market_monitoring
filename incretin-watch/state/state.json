@@ -192,6 +192,27 @@
         "2158a74ab0906eeb61a50527818bf99134fb2f2fd58b880b6a8d201c62b99320"
       ],
       "last_seen": "2026-10-30"
+    },
+    "c451b0ce82469223785868bcd8e81dbbfb9f111a44bdc23ec01369b9a7864c73": {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42955519",
+      "revisions": [
+        "c8b7c61d3320ced5346636632f5c6917e528257d6146a785813fd9de705ce338"
+      ],
+      "last_seen": "2026-10-31"
+    },
+    "814ba91d94520da660422b2c4f0a54e336e9a736a857c3f5ddbbed190f9a0918": {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42956842",
+      "revisions": [
+        "4756ad706b33c0b4de2c1dae5b68042629fb3820671bcf4f2f65a5e0eac44be3"
+      ],
+      "last_seen": "2026-10-31"
+    },
+    "cc1c8486a0d866504070aca4e8349e6c919a522afcb80c51a65086c8c3702e4f": {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42957437",
+      "revisions": [
+        "c9dadf4b555b1a85ecf45ebb9920797d6ccef6999637590f1105727ed626642e"
+      ],
+      "last_seen": "2026-10-31"
     }
   },
   "events": {
@@ -1267,7 +1288,147 @@
         "https://www.novonordisk.com/news-and-media/news-and-ir-materials/news-details.html?id=919208"
       ],
       "reported_at": "2026-10-30"
+    },
+    "f6fd67d609b944be31fe": {
+      "representative": {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/42955519",
+        "title": "Comparative adverse-event reporting patterns of semaglutide and tirzepatide: a disproportionality analysis of FAERS.",
+        "published_date": "2026-10-29",
+        "modified_date": null,
+        "indexed_date": "2026-10-30",
+        "doi": "10.1007/s12020-026-04840-z",
+        "pmid": "42955519",
+        "publication_types": [
+          "comparative study",
+          "journal article"
+        ],
+        "correction": false,
+        "research_status": "indexed_primary_candidate",
+        "journal": "Endocrine",
+        "body_status": "abstract_only",
+        "source_id": "europepmc",
+        "source_name": "Europe PMC / PubMed 原始研究",
+        "source_type": "research",
+        "source_region": "Global",
+        "molecules": [
+          "semaglutide",
+          "tirzepatide"
+        ],
+        "brands": [],
+        "companies": [
+          "Eli Lilly",
+          "Novo Nordisk"
+        ],
+        "categories": [
+          "clinical",
+          "safety"
+        ],
+        "stage": "study_publication",
+        "jurisdiction": "US",
+        "event_date": "2026-10-29",
+        "event_date_basis": "研究首次发表日期；不是试验完成日期",
+        "priority": 55,
+        "fingerprint": "c8b7c61d3320ced5346636632f5c6917e528257d6146a785813fd9de705ce338",
+        "trial_ids": []
+      },
+      "source_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/42955519"
+      ],
+      "reported_at": "2026-10-31"
+    },
+    "93e6e603a8d9006a80d3": {
+      "representative": {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/42956842",
+        "title": "Semaglutide versus other GLP-1 RAs and cardiovascular risk in obesity-related cancer survivors.",
+        "published_date": "2026-10-29",
+        "modified_date": null,
+        "indexed_date": "2026-10-30",
+        "doi": "10.1016/j.diabres.2026.113618",
+        "pmid": "42956842",
+        "publication_types": [
+          "im",
+          "journal article"
+        ],
+        "correction": false,
+        "research_status": "indexed_primary_candidate",
+        "journal": "Diabetes research and clinical practice",
+        "body_status": "abstract_only",
+        "source_id": "europepmc",
+        "source_name": "Europe PMC / PubMed 原始研究",
+        "source_type": "research",
+        "source_region": "Global",
+        "molecules": [
+          "semaglutide"
+        ],
+        "brands": [],
+        "companies": [
+          "Novo Nordisk"
+        ],
+        "categories": [
+          "clinical",
+          "safety"
+        ],
+        "stage": "study_publication",
+        "jurisdiction": "未明确",
+        "event_date": "2026-10-29",
+        "event_date_basis": "研究首次发表日期；不是试验完成日期",
+        "priority": 55,
+        "fingerprint": "4756ad706b33c0b4de2c1dae5b68042629fb3820671bcf4f2f65a5e0eac44be3",
+        "trial_ids": []
+      },
+      "source_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/42956842"
+      ],
+      "reported_at": "2026-10-31"
+    },
+    "2aa3cc0fe5b9445bc0c7": {
+      "representative": {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/42957437",
+        "title": "Early Treatment Trajectory and Long-Term Persistence to Semaglutide for Obesity: A Population-Based Cohort Study.",
+        "published_date": "2026-10-29",
+        "modified_date": null,
+        "indexed_date": "2026-10-30",
+        "doi": "10.1111/dom.71488",
+        "pmid": "42957437",
+        "publication_types": [
+          "im",
+          "journal article"
+        ],
+        "correction": false,
+        "research_status": "indexed_primary_candidate",
+        "journal": "Diabetes, obesity & metabolism",
+        "body_status": "abstract_only",
+        "source_id": "europepmc",
+        "source_name": "Europe PMC / PubMed 原始研究",
+        "source_type": "research",
+        "source_region": "Global",
+        "molecules": [
+          "semaglutide",
+          "tirzepatide"
+        ],
+        "brands": [
+          "Wegovy"
+        ],
+        "companies": [
+          "Eli Lilly",
+          "Novo Nordisk"
+        ],
+        "categories": [
+          "clinical"
+        ],
+        "stage": "study_publication",
+        "jurisdiction": "未明确",
+        "event_date": "2026-10-29",
+        "event_date_basis": "研究首次发表日期；不是试验完成日期",
+        "priority": 40,
+        "fingerprint": "c9dadf4b555b1a85ecf45ebb9920797d6ccef6999637590f1105727ed626642e",
+        "trial_ids": []
+      },
+      "source_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/42957437"
+      ],
+      "reported_at": "2026-10-31"
     }
   },
-  "last_successful_run": "2026-10-30T13:52:28+08:00"
+  "last_successful_run": "2026-10-31T13:43:23+08:00"
 }

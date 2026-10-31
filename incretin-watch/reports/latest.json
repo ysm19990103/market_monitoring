@@ -1,14 +1,340 @@
 {
   "metadata": {
-    "generated_at": "2026-10-30T13:52:28+08:00",
-    "since": "2026-10-17",
-    "until": "2026-10-30",
-    "duplicates": 27,
+    "generated_at": "2026-10-31T13:43:23+08:00",
+    "since": "2026-10-18",
+    "until": "2026-10-31",
+    "duplicates": 25,
     "analysis_note": "本次使用本地规则分析：核心信息保留原文摘录，三维影响为条件性模板，仍需人工复核。",
     "coverage_complete": false,
     "scope": "configured official sources and indexed primary literature"
   },
-  "events": [],
+  "events": [
+    {
+      "id": "f6fd67d609b944be31fe",
+      "event": {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/42955519",
+        "title": "Comparative adverse-event reporting patterns of semaglutide and tirzepatide: a disproportionality analysis of FAERS.",
+        "published_date": "2026-10-29",
+        "modified_date": null,
+        "indexed_date": "2026-10-30",
+        "doi": "10.1007/s12020-026-04840-z",
+        "pmid": "42955519",
+        "publication_types": [
+          "comparative study",
+          "journal article"
+        ],
+        "correction": false,
+        "research_status": "indexed_primary_candidate",
+        "journal": "Endocrine",
+        "body_status": "abstract_only",
+        "source_id": "europepmc",
+        "source_name": "Europe PMC / PubMed 原始研究",
+        "source_type": "research",
+        "source_region": "Global",
+        "molecules": [
+          "semaglutide",
+          "tirzepatide"
+        ],
+        "brands": [],
+        "companies": [
+          "Eli Lilly",
+          "Novo Nordisk"
+        ],
+        "categories": [
+          "clinical",
+          "safety"
+        ],
+        "stage": "study_publication",
+        "jurisdiction": "US",
+        "event_date": "2026-10-29",
+        "event_date_basis": "研究首次发表日期；不是试验完成日期",
+        "priority": 55,
+        "fingerprint": "c8b7c61d3320ced5346636632f5c6917e528257d6146a785813fd9de705ce338",
+        "trial_ids": []
+      },
+      "analysis": {
+        "mode": "rules",
+        "title_zh": "",
+        "facts": [
+          {
+            "claim": "原始研究摘要报告；需结合研究设计解读",
+            "source_id": "S1",
+            "evidence": "In an exploratory analysis restricted to male reports, erectile dysfunction was reported in 92 of 16,673 semaglutide reports and 46 of 27,321 tirzepatide reports"
+          }
+        ],
+        "impacts": {
+          "competitiveness": "本条涉及semaglutide、tirzepatide。新增证据可能改变疗效或结局差异化；跨试验百分比不能替代随机头对头比较。",
+          "clinical_use": "需核对研究人群、对照、主要终点、效应量和置信区间、随访及estimand；事后分析仅提供探索性证据。",
+          "future_market": "转化为未来市场优势还需要适应证、指南、支付及可及性支持，不能把研究结果当作监管许可。"
+        },
+        "uncertainties": [
+          "以下为按事件类别生成的条件性分析，不是对未来结果的验证。"
+        ],
+        "event_date": "2026-10-29",
+        "event_date_evidence": "",
+        "needs_review": true
+      },
+      "sources": [
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42955519",
+          "title": "Comparative adverse-event reporting patterns of semaglutide and tirzepatide: a disproportionality analysis of FAERS.",
+          "published_date": "2026-10-29",
+          "modified_date": null,
+          "indexed_date": "2026-10-30",
+          "doi": "10.1007/s12020-026-04840-z",
+          "pmid": "42955519",
+          "publication_types": [
+            "comparative study",
+            "journal article"
+          ],
+          "correction": false,
+          "research_status": "indexed_primary_candidate",
+          "journal": "Endocrine",
+          "body_status": "abstract_only",
+          "source_id": "europepmc",
+          "source_name": "Europe PMC / PubMed 原始研究",
+          "source_type": "research",
+          "source_region": "Global",
+          "molecules": [
+            "semaglutide",
+            "tirzepatide"
+          ],
+          "brands": [],
+          "companies": [
+            "Eli Lilly",
+            "Novo Nordisk"
+          ],
+          "categories": [
+            "clinical",
+            "safety"
+          ],
+          "stage": "study_publication",
+          "jurisdiction": "US",
+          "event_date": "2026-10-29",
+          "event_date_basis": "研究首次发表日期；不是试验完成日期",
+          "priority": 55,
+          "fingerprint": "c8b7c61d3320ced5346636632f5c6917e528257d6146a785813fd9de705ce338",
+          "trial_ids": []
+        }
+      ]
+    },
+    {
+      "id": "93e6e603a8d9006a80d3",
+      "event": {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/42956842",
+        "title": "Semaglutide versus other GLP-1 RAs and cardiovascular risk in obesity-related cancer survivors.",
+        "published_date": "2026-10-29",
+        "modified_date": null,
+        "indexed_date": "2026-10-30",
+        "doi": "10.1016/j.diabres.2026.113618",
+        "pmid": "42956842",
+        "publication_types": [
+          "im",
+          "journal article"
+        ],
+        "correction": false,
+        "research_status": "indexed_primary_candidate",
+        "journal": "Diabetes research and clinical practice",
+        "body_status": "abstract_only",
+        "source_id": "europepmc",
+        "source_name": "Europe PMC / PubMed 原始研究",
+        "source_type": "research",
+        "source_region": "Global",
+        "molecules": [
+          "semaglutide"
+        ],
+        "brands": [],
+        "companies": [
+          "Novo Nordisk"
+        ],
+        "categories": [
+          "clinical",
+          "safety"
+        ],
+        "stage": "study_publication",
+        "jurisdiction": "未明确",
+        "event_date": "2026-10-29",
+        "event_date_basis": "研究首次发表日期；不是试验完成日期",
+        "priority": 55,
+        "fingerprint": "4756ad706b33c0b4de2c1dae5b68042629fb3820671bcf4f2f65a5e0eac44be3",
+        "trial_ids": []
+      },
+      "analysis": {
+        "mode": "rules",
+        "title_zh": "",
+        "facts": [
+          {
+            "claim": "原始研究摘要报告；需结合研究设计解读",
+            "source_id": "S1",
+            "evidence": "The 5-year CIR% was 17.6 (95% CI, 12.3-22.9) for semaglutide and 26.6 (95% CI, 20.7-32.6) for other GLP-1 RA."
+          }
+        ],
+        "impacts": {
+          "competitiveness": "本条涉及semaglutide。新增证据可能改变疗效或结局差异化；跨试验百分比不能替代随机头对头比较。",
+          "clinical_use": "需核对研究人群、对照、主要终点、效应量和置信区间、随访及estimand；事后分析仅提供探索性证据。",
+          "future_market": "转化为未来市场优势还需要适应证、指南、支付及可及性支持，不能把研究结果当作监管许可。"
+        },
+        "uncertainties": [
+          "以下为按事件类别生成的条件性分析，不是对未来结果的验证。"
+        ],
+        "event_date": "2026-10-29",
+        "event_date_evidence": "",
+        "needs_review": true
+      },
+      "sources": [
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42956842",
+          "title": "Semaglutide versus other GLP-1 RAs and cardiovascular risk in obesity-related cancer survivors.",
+          "published_date": "2026-10-29",
+          "modified_date": null,
+          "indexed_date": "2026-10-30",
+          "doi": "10.1016/j.diabres.2026.113618",
+          "pmid": "42956842",
+          "publication_types": [
+            "im",
+            "journal article"
+          ],
+          "correction": false,
+          "research_status": "indexed_primary_candidate",
+          "journal": "Diabetes research and clinical practice",
+          "body_status": "abstract_only",
+          "source_id": "europepmc",
+          "source_name": "Europe PMC / PubMed 原始研究",
+          "source_type": "research",
+          "source_region": "Global",
+          "molecules": [
+            "semaglutide"
+          ],
+          "brands": [],
+          "companies": [
+            "Novo Nordisk"
+          ],
+          "categories": [
+            "clinical",
+            "safety"
+          ],
+          "stage": "study_publication",
+          "jurisdiction": "未明确",
+          "event_date": "2026-10-29",
+          "event_date_basis": "研究首次发表日期；不是试验完成日期",
+          "priority": 55,
+          "fingerprint": "4756ad706b33c0b4de2c1dae5b68042629fb3820671bcf4f2f65a5e0eac44be3",
+          "trial_ids": []
+        }
+      ]
+    },
+    {
+      "id": "2aa3cc0fe5b9445bc0c7",
+      "event": {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/42957437",
+        "title": "Early Treatment Trajectory and Long-Term Persistence to Semaglutide for Obesity: A Population-Based Cohort Study.",
+        "published_date": "2026-10-29",
+        "modified_date": null,
+        "indexed_date": "2026-10-30",
+        "doi": "10.1111/dom.71488",
+        "pmid": "42957437",
+        "publication_types": [
+          "im",
+          "journal article"
+        ],
+        "correction": false,
+        "research_status": "indexed_primary_candidate",
+        "journal": "Diabetes, obesity & metabolism",
+        "body_status": "abstract_only",
+        "source_id": "europepmc",
+        "source_name": "Europe PMC / PubMed 原始研究",
+        "source_type": "research",
+        "source_region": "Global",
+        "molecules": [
+          "semaglutide",
+          "tirzepatide"
+        ],
+        "brands": [
+          "Wegovy"
+        ],
+        "companies": [
+          "Eli Lilly",
+          "Novo Nordisk"
+        ],
+        "categories": [
+          "clinical"
+        ],
+        "stage": "study_publication",
+        "jurisdiction": "未明确",
+        "event_date": "2026-10-29",
+        "event_date_basis": "研究首次发表日期；不是试验完成日期",
+        "priority": 40,
+        "fingerprint": "c9dadf4b555b1a85ecf45ebb9920797d6ccef6999637590f1105727ed626642e",
+        "trial_ids": []
+      },
+      "analysis": {
+        "mode": "rules",
+        "title_zh": "",
+        "facts": [
+          {
+            "claim": "原始研究摘要报告；需结合研究设计解读",
+            "source_id": "S1",
+            "evidence": "Following tirzepatide availability, 2908 of 33 936 eligible participants (8.6%) initiated treatment over a median 3.1-month observation period."
+          }
+        ],
+        "impacts": {
+          "competitiveness": "本条涉及Wegovy。新增证据可能改变疗效或结局差异化；跨试验百分比不能替代随机头对头比较。",
+          "clinical_use": "需核对研究人群、对照、主要终点、效应量和置信区间、随访及estimand；事后分析仅提供探索性证据。",
+          "future_market": "转化为未来市场优势还需要适应证、指南、支付及可及性支持，不能把研究结果当作监管许可。"
+        },
+        "uncertainties": [
+          "以下为按事件类别生成的条件性分析，不是对未来结果的验证。"
+        ],
+        "event_date": "2026-10-29",
+        "event_date_evidence": "",
+        "needs_review": true
+      },
+      "sources": [
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42957437",
+          "title": "Early Treatment Trajectory and Long-Term Persistence to Semaglutide for Obesity: A Population-Based Cohort Study.",
+          "published_date": "2026-10-29",
+          "modified_date": null,
+          "indexed_date": "2026-10-30",
+          "doi": "10.1111/dom.71488",
+          "pmid": "42957437",
+          "publication_types": [
+            "im",
+            "journal article"
+          ],
+          "correction": false,
+          "research_status": "indexed_primary_candidate",
+          "journal": "Diabetes, obesity & metabolism",
+          "body_status": "abstract_only",
+          "source_id": "europepmc",
+          "source_name": "Europe PMC / PubMed 原始研究",
+          "source_type": "research",
+          "source_region": "Global",
+          "molecules": [
+            "semaglutide",
+            "tirzepatide"
+          ],
+          "brands": [
+            "Wegovy"
+          ],
+          "companies": [
+            "Eli Lilly",
+            "Novo Nordisk"
+          ],
+          "categories": [
+            "clinical"
+          ],
+          "stage": "study_publication",
+          "jurisdiction": "未明确",
+          "event_date": "2026-10-29",
+          "event_date_basis": "研究首次发表日期；不是试验完成日期",
+          "priority": 40,
+          "fingerprint": "c9dadf4b555b1a85ecf45ebb9920797d6ccef6999637590f1105727ed626642e",
+          "trial_ids": []
+        }
+      ]
+    }
+  ],
   "coverage": [
     {
       "id": "anvisa",
@@ -39,7 +365,7 @@
       "region": "EU",
       "url": "https://www.ema.europa.eu/en/human-medicine-new.xml",
       "status": "partial",
-      "discovered": 243,
+      "discovered": 245,
       "accepted": 2,
       "warnings": [
         "article fetch failed: https://www.ema.europa.eu/en/medicines/human/EPAR/wegovy (FetchError)",
@@ -62,8 +388,8 @@
       "region": "Global",
       "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
       "status": "ok",
-      "discovered": 178,
-      "accepted": 42,
+      "discovered": 211,
+      "accepted": 48,
       "warnings": []
     },
     {

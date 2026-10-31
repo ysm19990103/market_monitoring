@@ -1,7 +1,7 @@
 # 全球肠促胰素药物重要进展
 
-生成时间：2026-10-30T13:52:28+08:00（Asia/Shanghai）
-检索窗口：2026-10-17 至 2026-10-30；新事件/实质更新 0 条；抑制重复 27 条。
+生成时间：2026-10-31T13:43:23+08:00（Asia/Shanghai）
+检索窗口：2026-10-18 至 2026-10-31；新事件/实质更新 3 条；抑制重复 25 条。
 
 重点为礼来、诺和诺德已上市产品；其他药物仅作竞争背景。不同司法辖区、品牌、剂型和适应证分别判断。
 
@@ -9,7 +9,107 @@
 
 本次使用本地规则分析:核心信息保留原文摘录,三维影响为条件性模板,仍需人工复核。
 
-本次可访问来源中未检出符合筛选阈值且尚未报道的事件。来源失败、有限订阅窗口及未核实日期仍可能造成遗漏。
+## 1. Comparative adverse-event reporting patterns of semaglutide and tirzepatide: a disproportionality analysis of FAERS.
+
+类别：临床研究 / 安全性信号；分析模式：规则模板，待复核；优先分：55。
+
+| 字段 | 信息 |
+|---|---|
+| 事件日期 | 2026-10-29 |
+| 日期依据 | 研究首次发表日期;不是试验完成日期 |
+| 公告/发表日期 | 2026-10-29 |
+| 页面修改日期 | 未报告 |
+| 原文提及地区/来源辖区 | US |
+| 成分 | semaglutide / tirzepatide |
+| 原文提及品牌 | 未明确;不按成分自动外推品牌 |
+| 阶段标识 | study\_publication |
+| 证据范围 | abstract\_only |
+
+**来源记载 / 核心信息**
+
+- 原始研究摘要报告;需结合研究设计解读 [S1]
+  - 核对摘录：In an exploratory analysis restricted to male reports, erectile dysfunction was reported in 92 of 16,673 semaglutide reports and 46 of 27,321 tirzepatide reports
+
+**潜在影响（推断，尚待验证）**
+
+- 产品竞争力：本条涉及semaglutide、tirzepatide。新增证据可能改变疗效或结局差异化;跨试验百分比不能替代随机头对头比较。
+- 临床应用：需核对研究人群、对照、主要终点、效应量和置信区间、随访及estimand;事后分析仅提供探索性证据。
+- 未来市场：转化为未来市场优势还需要适应证、指南、支付及可及性支持,不能把研究结果当作监管许可。
+
+待核实：以下为按事件类别生成的条件性分析,不是对未来结果的验证。
+
+来源：
+
+- S1 [Europe PMC / PubMed 原始研究](https://pubmed.ncbi.nlm.nih.gov/42955519)；发布日期 2026-10-29；research。
+  DOI：[doi:10.1007/s12020-026-04840-z](https://doi.org/10.1007/s12020-026-04840-z)
+
+## 2. Semaglutide versus other GLP-1 RAs and cardiovascular risk in obesity-related cancer survivors.
+
+类别：临床研究 / 安全性信号；分析模式：规则模板，待复核；优先分：55。
+
+| 字段 | 信息 |
+|---|---|
+| 事件日期 | 2026-10-29 |
+| 日期依据 | 研究首次发表日期;不是试验完成日期 |
+| 公告/发表日期 | 2026-10-29 |
+| 页面修改日期 | 未报告 |
+| 原文提及地区/来源辖区 | 未明确 |
+| 成分 | semaglutide |
+| 原文提及品牌 | 未明确;不按成分自动外推品牌 |
+| 阶段标识 | study\_publication |
+| 证据范围 | abstract\_only |
+
+**来源记载 / 核心信息**
+
+- 原始研究摘要报告;需结合研究设计解读 [S1]
+  - 核对摘录：The 5-year CIR% was 17.6 (95% CI, 12.3-22.9) for semaglutide and 26.6 (95% CI, 20.7-32.6) for other GLP-1 RA.
+
+**潜在影响（推断，尚待验证）**
+
+- 产品竞争力：本条涉及semaglutide。新增证据可能改变疗效或结局差异化;跨试验百分比不能替代随机头对头比较。
+- 临床应用：需核对研究人群、对照、主要终点、效应量和置信区间、随访及estimand;事后分析仅提供探索性证据。
+- 未来市场：转化为未来市场优势还需要适应证、指南、支付及可及性支持,不能把研究结果当作监管许可。
+
+待核实：以下为按事件类别生成的条件性分析,不是对未来结果的验证。
+
+来源：
+
+- S1 [Europe PMC / PubMed 原始研究](https://pubmed.ncbi.nlm.nih.gov/42956842)；发布日期 2026-10-29；research。
+  DOI：[doi:10.1016/j.diabres.2026.113618](https://doi.org/10.1016/j.diabres.2026.113618)
+
+## 3. Early Treatment Trajectory and Long-Term Persistence to Semaglutide for Obesity: A Population-Based Cohort Study.
+
+类别：临床研究；分析模式：规则模板，待复核；优先分：40。
+
+| 字段 | 信息 |
+|---|---|
+| 事件日期 | 2026-10-29 |
+| 日期依据 | 研究首次发表日期;不是试验完成日期 |
+| 公告/发表日期 | 2026-10-29 |
+| 页面修改日期 | 未报告 |
+| 原文提及地区/来源辖区 | 未明确 |
+| 成分 | semaglutide / tirzepatide |
+| 原文提及品牌 | Wegovy |
+| 阶段标识 | study\_publication |
+| 证据范围 | abstract\_only |
+
+**来源记载 / 核心信息**
+
+- 原始研究摘要报告;需结合研究设计解读 [S1]
+  - 核对摘录：Following tirzepatide availability, 2908 of 33 936 eligible participants (8.6%) initiated treatment over a median 3.1-month observation period.
+
+**潜在影响（推断，尚待验证）**
+
+- 产品竞争力：本条涉及Wegovy。新增证据可能改变疗效或结局差异化;跨试验百分比不能替代随机头对头比较。
+- 临床应用：需核对研究人群、对照、主要终点、效应量和置信区间、随访及estimand;事后分析仅提供探索性证据。
+- 未来市场：转化为未来市场优势还需要适应证、指南、支付及可及性支持,不能把研究结果当作监管许可。
+
+待核实：以下为按事件类别生成的条件性分析,不是对未来结果的验证。
+
+来源：
+
+- S1 [Europe PMC / PubMed 原始研究](https://pubmed.ncbi.nlm.nih.gov/42957437)；发布日期 2026-10-29；research。
+  DOI：[doi:10.1111/dom.71488](https://doi.org/10.1111/dom.71488)
 
 ## 来源覆盖与缺口
 
@@ -21,7 +121,7 @@
 | [CMS 官方政策公告](https://www.cms.gov/newsroom) | US | partial | 0 |
 | [EMA EPAR 与审评意见](https://www.ema.europa.eu/en/human-medicine-new.xml) | EU | partial | 2 |
 | [EMA 新闻与安全信息](https://www.ema.europa.eu/en/news.xml) | EU | ok | 0 |
-| [Europe PMC / PubMed 原始研究](https://www.ebi.ac.uk/europepmc/webservices/rest/search) | Global | ok | 42 |
+| [Europe PMC / PubMed 原始研究](https://www.ebi.ac.uk/europepmc/webservices/rest/search) | Global | ok | 48 |
 | [FDA GLP-1 配制药政策](https://www.fda.gov/drugs/drug-alerts-and-statements/fda-clarifies-policies-compounders-national-glp-1-supply-begins-stabilize) | US | ok | 1 |
 | [FDA 新闻公告](https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/press-releases/rss.xml) | US | partial | 0 |
 | [FDA 药物安全通报](https://www.fda.gov/drugs/drug-safety-and-availability/drug-safety-communications) | US | partial | 1 |
