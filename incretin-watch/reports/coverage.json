@@ -28,7 +28,7 @@
     "region": "EU",
     "url": "https://www.ema.europa.eu/en/human-medicine-new.xml",
     "status": "partial",
-    "discovered": 245,
+    "discovered": 240,
     "accepted": 2,
     "warnings": [
       "article fetch failed: https://www.ema.europa.eu/en/medicines/human/EPAR/wegovy (FetchError)",
@@ -41,7 +41,7 @@
     "region": "EU",
     "url": "https://www.ema.europa.eu/en/news.xml",
     "status": "ok",
-    "discovered": 12,
+    "discovered": 8,
     "accepted": 0,
     "warnings": []
   },
@@ -51,8 +51,8 @@
     "region": "Global",
     "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
     "status": "ok",
-    "discovered": 211,
-    "accepted": 48,
+    "discovered": 230,
+    "accepted": 57,
     "warnings": []
   },
   {
