@@ -1,7 +1,7 @@
 # 全球肠促胰素药物重要进展
 
-生成时间：2026-11-02T13:56:56+08:00（Asia/Shanghai）
-检索窗口：2026-10-20 至 2026-11-02；新事件/实质更新 3 条；抑制重复 24 条。
+生成时间：2026-11-02T14:06:39+08:00（Asia/Shanghai）
+检索窗口：2026-10-20 至 2026-11-02；新事件/实质更新 0 条；抑制重复 27 条。
 
 重点为礼来、诺和诺德已上市产品；其他药物仅作竞争背景。不同司法辖区、品牌、剂型和适应证分别判断。
 
@@ -9,111 +9,7 @@
 
 本次使用本地规则分析:核心信息保留原文摘录,三维影响为条件性模板,仍需人工复核。
 
-## 1. Efficacy and safety of oral orforglipron in Japanese participants with obesity disease (ATTAIN-J): a double-blind, randomised, placebo-controlled, parallel-group, phase 3 trial.
-
-类别：临床研究 / 安全性信号；分析模式：规则模板，待复核；优先分：75。
-
-| 字段 | 信息 |
-|---|---|
-| 事件日期 | 未核实 |
-| 日期依据 | 页面变更首次观察于 2026-11-02;实际事件日期待确认 |
-| 公告/发表日期 | 2026-10-30 |
-| 页面修改日期 | 未报告 |
-| 原文提及地区/来源辖区 | JP |
-| 成分 | orforglipron / semaglutide / tirzepatide |
-| 原文提及品牌 | 未明确;不按成分自动外推品牌 |
-| 阶段标识 | study\_publication |
-| 证据范围 | abstract\_only |
-
-**来源记载 / 核心信息**
-
-- 原始研究摘要报告;需结合研究设计解读 [S1]
-  - 核对摘录：At week 72, mean percentage change in bodyweight was -5·9% (95% CI -7·6 to -4·2) with orforglipron 6 mg, -8·7% (-10·9 to -6·5) with
-
-**潜在影响（推断，尚待验证）**
-
-- 产品竞争力：本条涉及orforglipron、semaglutide、tirzepatide。如果信号被后续审评证实并导致标签调整,可能影响风险获益定位;自发报告数量不能直接比较产品安全性。
-- 临床应用：信号、统计关联和因果关系不同;没有暴露分母时不能计算发生率,临床行动应核对监管建议。
-- 未来市场：市场影响需等待因果评估、绝对风险、标签与真实处方变化验证。
-
-更新说明：同一来源出现新的相关正文版本;这是内容变更,不代表新的监管决定。
-
-待核实：以下为按事件类别生成的条件性分析,不是对未来结果的验证。
-
-来源：
-
-- S1 [Europe PMC / PubMed 原始研究](https://pubmed.ncbi.nlm.nih.gov/42962687)；发布日期 2026-10-30；research。
-  DOI：[doi:10.1016/s2213-8587(26)00232-9](https://doi.org/10.1016/s2213-8587(26)00232-9)
-
-## 2. Incretin-based therapies in psychiatry: A landscape analysis of ongoing randomized trials registered on ClinicalTrials.gov.
-
-类别：临床研究；分析模式：规则模板，待复核；优先分：40。
-
-| 字段 | 信息 |
-|---|---|
-| 事件日期 | 2026-10-21 |
-| 日期依据 | 研究首次发表日期;不是试验完成日期 |
-| 公告/发表日期 | 2026-10-21 |
-| 页面修改日期 | 未报告 |
-| 原文提及地区/来源辖区 | 未明确 |
-| 成分 | 类别政策 |
-| 原文提及品牌 | 未明确;不按成分自动外推品牌 |
-| 阶段标识 | study\_publication |
-| 证据范围 | abstract\_only |
-
-**来源记载 / 核心信息**
-
-- 原始研究摘要报告;需结合研究设计解读 [S1]
-  - 核对摘录：Three compounds accounted for the entire pipeline, and 17 trials (50%) tested a GLP-1-containing co-agonist.
-
-**潜在影响（推断，尚待验证）**
-
-- 产品竞争力：本条涉及肠促胰素药物类别。新增证据可能改变疗效或结局差异化;跨试验百分比不能替代随机头对头比较。
-- 临床应用：需核对研究人群、对照、主要终点、效应量和置信区间、随访及estimand;事后分析仅提供探索性证据。
-- 未来市场：转化为未来市场优势还需要适应证、指南、支付及可及性支持,不能把研究结果当作监管许可。
-
-待核实：以下为按事件类别生成的条件性分析,不是对未来结果的验证。
-
-来源：
-
-- S1 [Europe PMC / PubMed 原始研究](https://pubmed.ncbi.nlm.nih.gov/42962407)；发布日期 2026-10-21；research。
-  DOI：[doi:10.1016/j.jpsychires.2026.10.039](https://doi.org/10.1016/j.jpsychires.2026.10.039)
-
-## 3. Activities of daily living and health status benefits of semaglutide in very old patients with heart failure, type 2 diabetes, and obesity: Real-world practice study.
-
-类别：临床研究；分析模式：规则模板，待复核；优先分：40。
-
-| 字段 | 信息 |
-|---|---|
-| 事件日期 | 未核实 |
-| 日期依据 | 页面变更首次观察于 2026-11-02;实际事件日期待确认 |
-| 公告/发表日期 | 2026-10-30 |
-| 页面修改日期 | 未报告 |
-| 原文提及地区/来源辖区 | 未明确 |
-| 成分 | semaglutide |
-| 原文提及品牌 | 未明确;不按成分自动外推品牌 |
-| 阶段标识 | study\_publication |
-| 证据范围 | abstract\_only |
-
-**来源记载 / 核心信息**
-
-- 原始研究摘要报告;需结合研究设计解读 [S1]
-  - 核对摘录：The use of once-weekly semaglutide was associated with greater improvement in activities of daily living performance and health status in the Sema-Old Group compared
-
-**潜在影响（推断，尚待验证）**
-
-- 产品竞争力：本条涉及semaglutide。新增证据可能改变疗效或结局差异化;跨试验百分比不能替代随机头对头比较。
-- 临床应用：需核对研究人群、对照、主要终点、效应量和置信区间、随访及estimand;事后分析仅提供探索性证据。
-- 未来市场：转化为未来市场优势还需要适应证、指南、支付及可及性支持,不能把研究结果当作监管许可。
-
-更新说明：同一来源出现新的相关正文版本;这是内容变更,不代表新的监管决定。
-
-待核实：以下为按事件类别生成的条件性分析,不是对未来结果的验证。
-
-来源：
-
-- S1 [Europe PMC / PubMed 原始研究](https://pubmed.ncbi.nlm.nih.gov/42963299)；发布日期 2026-10-30；research。
-  DOI：[doi:10.1016/j.medcli.2026.107663](https://doi.org/10.1016/j.medcli.2026.107663)
+本次可访问来源中未检出符合筛选阈值且尚未报道的事件。来源失败、有限订阅窗口及未核实日期仍可能造成遗漏。
 
 ## 来源覆盖与缺口
 
