@@ -1,16 +1,16 @@
 {
   "metadata": {
-    "generated_at": "2026-11-01T14:07:26+08:00",
-    "since": "2026-10-19",
-    "until": "2026-11-01",
-    "duplicates": 26,
+    "generated_at": "2026-11-02T13:56:56+08:00",
+    "since": "2026-10-20",
+    "until": "2026-11-02",
+    "duplicates": 24,
     "analysis_note": "本次使用本地规则分析：核心信息保留原文摘录，三维影响为条件性模板，仍需人工复核。",
     "coverage_complete": false,
     "scope": "configured official sources and indexed primary literature"
   },
   "events": [
     {
-      "id": "74166039aa9f06278c9d",
+      "id": "086f6d24786255b56815",
       "event": {
         "url": "https://pubmed.ncbi.nlm.nih.gov/42962687",
         "title": "Efficacy and safety of oral orforglipron in Japanese participants with obesity disease (ATTAIN-J): a double-blind, randomised, placebo-controlled, parallel-group, phase 3 trial.",
@@ -20,7 +20,6 @@
         "doi": "10.1016/s2213-8587(26)00232-9",
         "pmid": "42962687",
         "publication_types": [
-          "im",
           "journal article"
         ],
         "correction": false,
@@ -47,13 +46,14 @@
         ],
         "stage": "study_publication",
         "jurisdiction": "JP",
-        "event_date": "2026-10-30",
-        "event_date_basis": "研究首次发表日期；不是试验完成日期",
+        "event_date": null,
+        "event_date_basis": "页面变更首次观察于 2026-11-02；实际事件日期待确认",
         "priority": 75,
-        "fingerprint": "a03492fcdaee1c260190ceecf10ae0a45f1dda34473779252fb4c42e68e4f747",
+        "fingerprint": "ef1dc54d2d8ff3ffc10b9c416dda1ed30864be2d9195e568c395039021b30b49",
         "trial_ids": [
           "NCT05931380"
-        ]
+        ],
+        "update_note": "同一来源出现新的相关正文版本；这是内容变更，不代表新的监管决定。"
       },
       "analysis": {
         "mode": "rules",
@@ -73,7 +73,7 @@
         "uncertainties": [
           "以下为按事件类别生成的条件性分析，不是对未来结果的验证。"
         ],
-        "event_date": "2026-10-30",
+        "event_date": null,
         "event_date_evidence": "",
         "needs_review": true
       },
@@ -87,7 +87,6 @@
           "doi": "10.1016/s2213-8587(26)00232-9",
           "pmid": "42962687",
           "publication_types": [
-            "im",
             "journal article"
           ],
           "correction": false,
@@ -114,376 +113,51 @@
           ],
           "stage": "study_publication",
           "jurisdiction": "JP",
-          "event_date": "2026-10-30",
-          "event_date_basis": "研究首次发表日期；不是试验完成日期",
+          "event_date": null,
+          "event_date_basis": "页面变更首次观察于 2026-11-02；实际事件日期待确认",
           "priority": 75,
-          "fingerprint": "a03492fcdaee1c260190ceecf10ae0a45f1dda34473779252fb4c42e68e4f747",
+          "fingerprint": "ef1dc54d2d8ff3ffc10b9c416dda1ed30864be2d9195e568c395039021b30b49",
           "trial_ids": [
             "NCT05931380"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "ea2df802eb9f874dbb41",
-      "event": {
-        "url": "https://pubmed.ncbi.nlm.nih.gov/42956842",
-        "title": "Semaglutide versus other GLP-1 RAs and cardiovascular risk in obesity-related cancer survivors.",
-        "published_date": "2026-10-29",
-        "modified_date": null,
-        "indexed_date": "2026-10-30",
-        "doi": "10.1016/j.diabres.2026.113618",
-        "pmid": "42956842",
-        "publication_types": [
-          "journal article"
-        ],
-        "correction": false,
-        "research_status": "indexed_primary_candidate",
-        "journal": "Diabetes research and clinical practice",
-        "body_status": "abstract_only",
-        "source_id": "europepmc",
-        "source_name": "Europe PMC / PubMed 原始研究",
-        "source_type": "research",
-        "source_region": "Global",
-        "molecules": [
-          "semaglutide"
-        ],
-        "brands": [],
-        "companies": [
-          "Novo Nordisk"
-        ],
-        "categories": [
-          "clinical",
-          "safety"
-        ],
-        "stage": "study_publication",
-        "jurisdiction": "未明确",
-        "event_date": null,
-        "event_date_basis": "页面变更首次观察于 2026-11-01；实际事件日期待确认",
-        "priority": 55,
-        "fingerprint": "475a8525492f0f080a47507160849029ea6b34fe4eec90e1c430bad3abc1c76a",
-        "trial_ids": [],
-        "update_note": "同一来源出现新的相关正文版本；这是内容变更，不代表新的监管决定。"
-      },
-      "analysis": {
-        "mode": "rules",
-        "title_zh": "",
-        "facts": [
-          {
-            "claim": "原始研究摘要报告；需结合研究设计解读",
-            "source_id": "S1",
-            "evidence": "The 5-year CIR% was 17.6 (95% CI, 12.3-22.9) for semaglutide and 26.6 (95% CI, 20.7-32.6) for other GLP-1 RA."
-          }
-        ],
-        "impacts": {
-          "competitiveness": "本条涉及semaglutide。新增证据可能改变疗效或结局差异化；跨试验百分比不能替代随机头对头比较。",
-          "clinical_use": "需核对研究人群、对照、主要终点、效应量和置信区间、随访及estimand；事后分析仅提供探索性证据。",
-          "future_market": "转化为未来市场优势还需要适应证、指南、支付及可及性支持，不能把研究结果当作监管许可。"
-        },
-        "uncertainties": [
-          "以下为按事件类别生成的条件性分析，不是对未来结果的验证。"
-        ],
-        "event_date": null,
-        "event_date_evidence": "",
-        "needs_review": true
-      },
-      "sources": [
-        {
-          "url": "https://pubmed.ncbi.nlm.nih.gov/42956842",
-          "title": "Semaglutide versus other GLP-1 RAs and cardiovascular risk in obesity-related cancer survivors.",
-          "published_date": "2026-10-29",
-          "modified_date": null,
-          "indexed_date": "2026-10-30",
-          "doi": "10.1016/j.diabres.2026.113618",
-          "pmid": "42956842",
-          "publication_types": [
-            "journal article"
           ],
-          "correction": false,
-          "research_status": "indexed_primary_candidate",
-          "journal": "Diabetes research and clinical practice",
-          "body_status": "abstract_only",
-          "source_id": "europepmc",
-          "source_name": "Europe PMC / PubMed 原始研究",
-          "source_type": "research",
-          "source_region": "Global",
-          "molecules": [
-            "semaglutide"
-          ],
-          "brands": [],
-          "companies": [
-            "Novo Nordisk"
-          ],
-          "categories": [
-            "clinical",
-            "safety"
-          ],
-          "stage": "study_publication",
-          "jurisdiction": "未明确",
-          "event_date": null,
-          "event_date_basis": "页面变更首次观察于 2026-11-01；实际事件日期待确认",
-          "priority": 55,
-          "fingerprint": "475a8525492f0f080a47507160849029ea6b34fe4eec90e1c430bad3abc1c76a",
-          "trial_ids": [],
           "update_note": "同一来源出现新的相关正文版本；这是内容变更，不代表新的监管决定。"
         }
       ]
     },
     {
-      "id": "460fb6b8de647e7ad544",
+      "id": "cd8897dd87f8db164ece",
       "event": {
-        "url": "https://pubmed.ncbi.nlm.nih.gov/42803597",
-        "title": "Tirzepatide Initiation in Lithium-Treated Bipolar Disorder: Renal Biomarker Trajectories and Lithium Safety Signals Over 12 Months in a Real-World Cohort.",
-        "published_date": "2026-11-01",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/42962407",
+        "title": "Incretin-based therapies in psychiatry: A landscape analysis of ongoing randomized trials registered on ClinicalTrials.gov.",
+        "published_date": "2026-10-21",
         "modified_date": null,
-        "indexed_date": "2026-09-29",
-        "doi": "10.1002/hup.70066",
-        "pmid": "42803597",
+        "indexed_date": "2026-10-31",
+        "doi": "10.1016/j.jpsychires.2026.10.039",
+        "pmid": "42962407",
         "publication_types": [
           "journal article"
         ],
         "correction": false,
         "research_status": "indexed_primary_candidate",
-        "journal": "Human psychopharmacology",
+        "journal": "Journal of psychiatric research",
         "body_status": "abstract_only",
         "source_id": "europepmc",
         "source_name": "Europe PMC / PubMed 原始研究",
         "source_type": "research",
         "source_region": "Global",
-        "molecules": [
-          "tirzepatide"
-        ],
+        "molecules": [],
         "brands": [],
-        "companies": [
-          "Eli Lilly"
-        ],
-        "categories": [
-          "clinical",
-          "safety"
-        ],
-        "stage": "study_publication",
-        "jurisdiction": "未明确",
-        "event_date": "2026-11-01",
-        "event_date_basis": "研究首次发表日期；不是试验完成日期",
-        "priority": 55,
-        "fingerprint": "3b7c3465cea6afdcaa0d934e3b9960617966db84996d082d5c75947137881eff",
-        "trial_ids": []
-      },
-      "analysis": {
-        "mode": "rules",
-        "title_zh": "",
-        "facts": [
-          {
-            "claim": "原始研究摘要报告；需结合研究设计解读",
-            "source_id": "S1",
-            "evidence": "Two patients had lithium > 1.2 mmol/L; one developed clinician-attributed symptomatic toxicity and discontinued tirzepatide."
-          }
-        ],
-        "impacts": {
-          "competitiveness": "本条涉及tirzepatide。如果信号被后续审评证实并导致标签调整，可能影响风险获益定位；自发报告数量不能直接比较产品安全性。",
-          "clinical_use": "信号、统计关联和因果关系不同；没有暴露分母时不能计算发生率，临床行动应核对监管建议。",
-          "future_market": "市场影响需等待因果评估、绝对风险、标签与真实处方变化验证。"
-        },
-        "uncertainties": [
-          "以下为按事件类别生成的条件性分析，不是对未来结果的验证。"
-        ],
-        "event_date": "2026-11-01",
-        "event_date_evidence": "",
-        "needs_review": true
-      },
-      "sources": [
-        {
-          "url": "https://pubmed.ncbi.nlm.nih.gov/42803597",
-          "title": "Tirzepatide Initiation in Lithium-Treated Bipolar Disorder: Renal Biomarker Trajectories and Lithium Safety Signals Over 12 Months in a Real-World Cohort.",
-          "published_date": "2026-11-01",
-          "modified_date": null,
-          "indexed_date": "2026-09-29",
-          "doi": "10.1002/hup.70066",
-          "pmid": "42803597",
-          "publication_types": [
-            "journal article"
-          ],
-          "correction": false,
-          "research_status": "indexed_primary_candidate",
-          "journal": "Human psychopharmacology",
-          "body_status": "abstract_only",
-          "source_id": "europepmc",
-          "source_name": "Europe PMC / PubMed 原始研究",
-          "source_type": "research",
-          "source_region": "Global",
-          "molecules": [
-            "tirzepatide"
-          ],
-          "brands": [],
-          "companies": [
-            "Eli Lilly"
-          ],
-          "categories": [
-            "clinical",
-            "safety"
-          ],
-          "stage": "study_publication",
-          "jurisdiction": "未明确",
-          "event_date": "2026-11-01",
-          "event_date_basis": "研究首次发表日期；不是试验完成日期",
-          "priority": 55,
-          "fingerprint": "3b7c3465cea6afdcaa0d934e3b9960617966db84996d082d5c75947137881eff",
-          "trial_ids": []
-        }
-      ]
-    },
-    {
-      "id": "95e74d70d136f81c7549",
-      "event": {
-        "url": "https://pubmed.ncbi.nlm.nih.gov/42946127",
-        "title": "Semaglutide and Panic Attacks: Active-Comparator Disproportionality Analysis, Temporal Assessment of Notoriety Bias and Evidence Triangulation in Post-Marketing Pharmacovigilance.",
-        "published_date": "2026-11-01",
-        "modified_date": null,
-        "indexed_date": "2026-10-28",
-        "doi": "10.1002/pds.70517",
-        "pmid": "42946127",
-        "publication_types": [
-          "research-article",
-          "journal article"
-        ],
-        "correction": false,
-        "research_status": "indexed_primary_candidate",
-        "journal": "Pharmacoepidemiology and drug safety",
-        "body_status": "abstract_only",
-        "source_id": "europepmc",
-        "source_name": "Europe PMC / PubMed 原始研究",
-        "source_type": "research",
-        "source_region": "Global",
-        "molecules": [
-          "dulaglutide",
-          "semaglutide"
-        ],
-        "brands": [],
-        "companies": [
-          "Eli Lilly",
-          "Novo Nordisk"
-        ],
-        "categories": [
-          "clinical",
-          "competition"
-        ],
-        "stage": "study_publication",
-        "jurisdiction": "US",
-        "event_date": "2026-11-01",
-        "event_date_basis": "研究首次发表日期；不是试验完成日期",
-        "priority": 52,
-        "fingerprint": "abc090b4069a5ab6cb46394679eec386650caec0091ade2c01612987b26434ab",
-        "trial_ids": []
-      },
-      "analysis": {
-        "mode": "rules",
-        "title_zh": "",
-        "facts": [
-          {
-            "claim": "原始研究摘要报告；需结合研究设计解读",
-            "source_id": "S1",
-            "evidence": "Results Among 33 267 semaglutide, 54 282 dulaglutide and 25 380 empagliflozin reports, panic attacks were recorded in 87 (0.26%), 28 (0.05%) and 13"
-          }
-        ],
-        "impacts": {
-          "competitiveness": "本条涉及dulaglutide、semaglutide。新增证据可能改变疗效或结局差异化；跨试验百分比不能替代随机头对头比较。",
-          "clinical_use": "需核对研究人群、对照、主要终点、效应量和置信区间、随访及estimand；事后分析仅提供探索性证据。",
-          "future_market": "转化为未来市场优势还需要适应证、指南、支付及可及性支持，不能把研究结果当作监管许可。"
-        },
-        "uncertainties": [
-          "以下为按事件类别生成的条件性分析，不是对未来结果的验证。"
-        ],
-        "event_date": "2026-11-01",
-        "event_date_evidence": "",
-        "needs_review": true
-      },
-      "sources": [
-        {
-          "url": "https://pubmed.ncbi.nlm.nih.gov/42946127",
-          "title": "Semaglutide and Panic Attacks: Active-Comparator Disproportionality Analysis, Temporal Assessment of Notoriety Bias and Evidence Triangulation in Post-Marketing Pharmacovigilance.",
-          "published_date": "2026-11-01",
-          "modified_date": null,
-          "indexed_date": "2026-10-28",
-          "doi": "10.1002/pds.70517",
-          "pmid": "42946127",
-          "publication_types": [
-            "research-article",
-            "journal article"
-          ],
-          "correction": false,
-          "research_status": "indexed_primary_candidate",
-          "journal": "Pharmacoepidemiology and drug safety",
-          "body_status": "abstract_only",
-          "source_id": "europepmc",
-          "source_name": "Europe PMC / PubMed 原始研究",
-          "source_type": "research",
-          "source_region": "Global",
-          "molecules": [
-            "dulaglutide",
-            "semaglutide"
-          ],
-          "brands": [],
-          "companies": [
-            "Eli Lilly",
-            "Novo Nordisk"
-          ],
-          "categories": [
-            "clinical",
-            "competition"
-          ],
-          "stage": "study_publication",
-          "jurisdiction": "US",
-          "event_date": "2026-11-01",
-          "event_date_basis": "研究首次发表日期；不是试验完成日期",
-          "priority": 52,
-          "fingerprint": "abc090b4069a5ab6cb46394679eec386650caec0091ade2c01612987b26434ab",
-          "trial_ids": []
-        }
-      ]
-    },
-    {
-      "id": "a13549739991bc3f384e",
-      "event": {
-        "url": "https://pubmed.ncbi.nlm.nih.gov/42957437",
-        "title": "Early Treatment Trajectory and Long-Term Persistence to Semaglutide for Obesity: A Population-Based Cohort Study.",
-        "published_date": "2026-10-29",
-        "modified_date": null,
-        "indexed_date": "2026-10-30",
-        "doi": "10.1111/dom.71488",
-        "pmid": "42957437",
-        "publication_types": [
-          "journal article"
-        ],
-        "correction": false,
-        "research_status": "indexed_primary_candidate",
-        "journal": "Diabetes, obesity & metabolism",
-        "body_status": "abstract_only",
-        "source_id": "europepmc",
-        "source_name": "Europe PMC / PubMed 原始研究",
-        "source_type": "research",
-        "source_region": "Global",
-        "molecules": [
-          "semaglutide",
-          "tirzepatide"
-        ],
-        "brands": [
-          "Wegovy"
-        ],
-        "companies": [
-          "Eli Lilly",
-          "Novo Nordisk"
-        ],
+        "companies": [],
         "categories": [
           "clinical"
         ],
         "stage": "study_publication",
         "jurisdiction": "未明确",
-        "event_date": null,
-        "event_date_basis": "页面变更首次观察于 2026-11-01；实际事件日期待确认",
+        "event_date": "2026-10-21",
+        "event_date_basis": "研究首次发表日期；不是试验完成日期",
         "priority": 40,
-        "fingerprint": "8cc305b49af24c6a545e4a5a703df05906e8fb7fd264e9e5146d21c6b8df935e",
-        "trial_ids": [],
-        "update_note": "同一来源出现新的相关正文版本；这是内容变更，不代表新的监管决定。"
+        "fingerprint": "00e7d2dd52aa90e6632182b0ce39b27a3fc68116879065bfbbe0ff4b0f3fd547",
+        "trial_ids": []
       },
       "analysis": {
         "mode": "rules",
@@ -492,68 +166,59 @@
           {
             "claim": "原始研究摘要报告；需结合研究设计解读",
             "source_id": "S1",
-            "evidence": "Following tirzepatide availability, 2908 of 33 936 eligible participants (8.6%) initiated treatment over a median 3.1-month observation period."
+            "evidence": "Three compounds accounted for the entire pipeline, and 17 trials (50%) tested a GLP-1-containing co-agonist."
           }
         ],
         "impacts": {
-          "competitiveness": "本条涉及Wegovy。新增证据可能改变疗效或结局差异化；跨试验百分比不能替代随机头对头比较。",
+          "competitiveness": "本条涉及肠促胰素药物类别。新增证据可能改变疗效或结局差异化；跨试验百分比不能替代随机头对头比较。",
           "clinical_use": "需核对研究人群、对照、主要终点、效应量和置信区间、随访及estimand；事后分析仅提供探索性证据。",
           "future_market": "转化为未来市场优势还需要适应证、指南、支付及可及性支持，不能把研究结果当作监管许可。"
         },
         "uncertainties": [
           "以下为按事件类别生成的条件性分析，不是对未来结果的验证。"
         ],
-        "event_date": null,
+        "event_date": "2026-10-21",
         "event_date_evidence": "",
         "needs_review": true
       },
       "sources": [
         {
-          "url": "https://pubmed.ncbi.nlm.nih.gov/42957437",
-          "title": "Early Treatment Trajectory and Long-Term Persistence to Semaglutide for Obesity: A Population-Based Cohort Study.",
-          "published_date": "2026-10-29",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42962407",
+          "title": "Incretin-based therapies in psychiatry: A landscape analysis of ongoing randomized trials registered on ClinicalTrials.gov.",
+          "published_date": "2026-10-21",
           "modified_date": null,
-          "indexed_date": "2026-10-30",
-          "doi": "10.1111/dom.71488",
-          "pmid": "42957437",
+          "indexed_date": "2026-10-31",
+          "doi": "10.1016/j.jpsychires.2026.10.039",
+          "pmid": "42962407",
           "publication_types": [
             "journal article"
           ],
           "correction": false,
           "research_status": "indexed_primary_candidate",
-          "journal": "Diabetes, obesity & metabolism",
+          "journal": "Journal of psychiatric research",
           "body_status": "abstract_only",
           "source_id": "europepmc",
           "source_name": "Europe PMC / PubMed 原始研究",
           "source_type": "research",
           "source_region": "Global",
-          "molecules": [
-            "semaglutide",
-            "tirzepatide"
-          ],
-          "brands": [
-            "Wegovy"
-          ],
-          "companies": [
-            "Eli Lilly",
-            "Novo Nordisk"
-          ],
+          "molecules": [],
+          "brands": [],
+          "companies": [],
           "categories": [
             "clinical"
           ],
           "stage": "study_publication",
           "jurisdiction": "未明确",
-          "event_date": null,
-          "event_date_basis": "页面变更首次观察于 2026-11-01；实际事件日期待确认",
+          "event_date": "2026-10-21",
+          "event_date_basis": "研究首次发表日期；不是试验完成日期",
           "priority": 40,
-          "fingerprint": "8cc305b49af24c6a545e4a5a703df05906e8fb7fd264e9e5146d21c6b8df935e",
-          "trial_ids": [],
-          "update_note": "同一来源出现新的相关正文版本；这是内容变更，不代表新的监管决定。"
+          "fingerprint": "00e7d2dd52aa90e6632182b0ce39b27a3fc68116879065bfbbe0ff4b0f3fd547",
+          "trial_ids": []
         }
       ]
     },
     {
-      "id": "ab31eccc8d540eb31c6a",
+      "id": "279ac163e6b2fe03eb20",
       "event": {
         "url": "https://pubmed.ncbi.nlm.nih.gov/42963299",
         "title": "Activities of daily living and health status benefits of semaglutide in very old patients with heart failure, type 2 diabetes, and obesity: Real-world practice study.",
@@ -563,7 +228,6 @@
         "doi": "10.1016/j.medcli.2026.107663",
         "pmid": "42963299",
         "publication_types": [
-          "im",
           "journal article"
         ],
         "correction": false,
@@ -586,11 +250,12 @@
         ],
         "stage": "study_publication",
         "jurisdiction": "未明确",
-        "event_date": "2026-10-30",
-        "event_date_basis": "研究首次发表日期；不是试验完成日期",
+        "event_date": null,
+        "event_date_basis": "页面变更首次观察于 2026-11-02；实际事件日期待确认",
         "priority": 40,
-        "fingerprint": "65fda59cc72b09c0f359c523097ff671bf945c0e9daa042874c6907bb2fb66a3",
-        "trial_ids": []
+        "fingerprint": "6a195f6ae04561fd7e0aab639f81b800559511cad4cfc5bd0d104308bc4b1891",
+        "trial_ids": [],
+        "update_note": "同一来源出现新的相关正文版本；这是内容变更，不代表新的监管决定。"
       },
       "analysis": {
         "mode": "rules",
@@ -610,7 +275,7 @@
         "uncertainties": [
           "以下为按事件类别生成的条件性分析，不是对未来结果的验证。"
         ],
-        "event_date": "2026-10-30",
+        "event_date": null,
         "event_date_evidence": "",
         "needs_review": true
       },
@@ -624,7 +289,6 @@
           "doi": "10.1016/j.medcli.2026.107663",
           "pmid": "42963299",
           "publication_types": [
-            "im",
             "journal article"
           ],
           "correction": false,
@@ -647,213 +311,12 @@
           ],
           "stage": "study_publication",
           "jurisdiction": "未明确",
-          "event_date": "2026-10-30",
-          "event_date_basis": "研究首次发表日期；不是试验完成日期",
+          "event_date": null,
+          "event_date_basis": "页面变更首次观察于 2026-11-02；实际事件日期待确认",
           "priority": 40,
-          "fingerprint": "65fda59cc72b09c0f359c523097ff671bf945c0e9daa042874c6907bb2fb66a3",
-          "trial_ids": []
-        }
-      ]
-    },
-    {
-      "id": "37e9fbda8a8e5b0fc527",
-      "event": {
-        "url": "https://pubmed.ncbi.nlm.nih.gov/42960245",
-        "title": "The pharmacist's role in enhancing adherence to GLP1 based anti-obesity medications through comprehensive side effect management.",
-        "published_date": "2026-10-20",
-        "modified_date": null,
-        "indexed_date": "2026-10-31",
-        "doi": "10.1016/j.rcsop.2026.100867",
-        "pmid": "42960245",
-        "publication_types": [
-          "discussion",
-          "journal article"
-        ],
-        "correction": false,
-        "research_status": "indexed_primary_candidate",
-        "journal": "Exploratory research in clinical and social pharmacy",
-        "body_status": "abstract_only",
-        "source_id": "europepmc",
-        "source_name": "Europe PMC / PubMed 原始研究",
-        "source_type": "research",
-        "source_region": "Global",
-        "molecules": [],
-        "brands": [],
-        "companies": [],
-        "categories": [
-          "clinical",
-          "safety"
-        ],
-        "stage": "study_publication",
-        "jurisdiction": "未明确",
-        "event_date": "2026-10-20",
-        "event_date_basis": "研究首次发表日期；不是试验完成日期",
-        "priority": 35,
-        "fingerprint": "4080122b8be4a885b6a71534825ea790b97dcd8e1231c8aefdc844a1f86a9cee",
-        "trial_ids": []
-      },
-      "analysis": {
-        "mode": "rules",
-        "title_zh": "",
-        "facts": [
-          {
-            "claim": "原始研究摘要报告；需结合研究设计解读",
-            "source_id": "S1",
-            "evidence": "The emergence of glucagon-like peptide-1 (GLP1) and GLP1/glucose-dependent insulinotropic polypeptide (GIP) receptor agonists (hereinafter GLP1-RAs, GLP1-GIP-RAs) have transformed obesity treatment."
-          }
-        ],
-        "impacts": {
-          "competitiveness": "本条涉及肠促胰素药物类别。新增证据可能改变疗效或结局差异化；跨试验百分比不能替代随机头对头比较。",
-          "clinical_use": "需核对研究人群、对照、主要终点、效应量和置信区间、随访及estimand；事后分析仅提供探索性证据。",
-          "future_market": "转化为未来市场优势还需要适应证、指南、支付及可及性支持，不能把研究结果当作监管许可。"
-        },
-        "uncertainties": [
-          "以下为按事件类别生成的条件性分析，不是对未来结果的验证。"
-        ],
-        "event_date": "2026-10-20",
-        "event_date_evidence": "",
-        "needs_review": true
-      },
-      "sources": [
-        {
-          "url": "https://pubmed.ncbi.nlm.nih.gov/42960245",
-          "title": "The pharmacist's role in enhancing adherence to GLP1 based anti-obesity medications through comprehensive side effect management.",
-          "published_date": "2026-10-20",
-          "modified_date": null,
-          "indexed_date": "2026-10-31",
-          "doi": "10.1016/j.rcsop.2026.100867",
-          "pmid": "42960245",
-          "publication_types": [
-            "discussion",
-            "journal article"
-          ],
-          "correction": false,
-          "research_status": "indexed_primary_candidate",
-          "journal": "Exploratory research in clinical and social pharmacy",
-          "body_status": "abstract_only",
-          "source_id": "europepmc",
-          "source_name": "Europe PMC / PubMed 原始研究",
-          "source_type": "research",
-          "source_region": "Global",
-          "molecules": [],
-          "brands": [],
-          "companies": [],
-          "categories": [
-            "clinical",
-            "safety"
-          ],
-          "stage": "study_publication",
-          "jurisdiction": "未明确",
-          "event_date": "2026-10-20",
-          "event_date_basis": "研究首次发表日期；不是试验完成日期",
-          "priority": 35,
-          "fingerprint": "4080122b8be4a885b6a71534825ea790b97dcd8e1231c8aefdc844a1f86a9cee",
-          "trial_ids": []
-        }
-      ]
-    },
-    {
-      "id": "8c9dcd4725c53ad2061f",
-      "event": {
-        "url": "https://pubmed.ncbi.nlm.nih.gov/42963450",
-        "title": "Charcoal-Based Depletion Method to Improve Drug Tolerance in Neutralizing Antibody Assays for Therapeutic Peptides.",
-        "published_date": "2026-10-30",
-        "modified_date": null,
-        "indexed_date": "2026-10-31",
-        "doi": "10.1208/s12248-026-01311-1",
-        "pmid": "42963450",
-        "publication_types": [
-          "im",
-          "journal article"
-        ],
-        "correction": false,
-        "research_status": "indexed_primary_candidate",
-        "journal": "The AAPS journal",
-        "body_status": "abstract_only",
-        "source_id": "europepmc",
-        "source_name": "Europe PMC / PubMed 原始研究",
-        "source_type": "research",
-        "source_region": "Global",
-        "molecules": [
-          "survodutide"
-        ],
-        "brands": [],
-        "companies": [
-          "Competitor"
-        ],
-        "categories": [
-          "clinical",
-          "safety"
-        ],
-        "stage": "study_publication",
-        "jurisdiction": "未明确",
-        "event_date": "2026-10-30",
-        "event_date_basis": "研究首次发表日期；不是试验完成日期",
-        "priority": 35,
-        "fingerprint": "f3dc8d93602d3bb41613ecd6cee0b335396aa788e662d3b4a5bd1f54356d6896",
-        "trial_ids": []
-      },
-      "analysis": {
-        "mode": "rules",
-        "title_zh": "",
-        "facts": [
-          {
-            "claim": "原始研究摘要报告；需结合研究设计解读",
-            "source_id": "S1",
-            "evidence": "Peptide based therapeutics such as GLP-1 analogs are an increasingly important therapeutic modality for metabolic diseases."
-          }
-        ],
-        "impacts": {
-          "competitiveness": "本条涉及survodutide。新增证据可能改变疗效或结局差异化；跨试验百分比不能替代随机头对头比较。",
-          "clinical_use": "需核对研究人群、对照、主要终点、效应量和置信区间、随访及estimand；事后分析仅提供探索性证据。",
-          "future_market": "转化为未来市场优势还需要适应证、指南、支付及可及性支持，不能把研究结果当作监管许可。"
-        },
-        "uncertainties": [
-          "以下为按事件类别生成的条件性分析，不是对未来结果的验证。"
-        ],
-        "event_date": "2026-10-30",
-        "event_date_evidence": "",
-        "needs_review": true
-      },
-      "sources": [
-        {
-          "url": "https://pubmed.ncbi.nlm.nih.gov/42963450",
-          "title": "Charcoal-Based Depletion Method to Improve Drug Tolerance in Neutralizing Antibody Assays for Therapeutic Peptides.",
-          "published_date": "2026-10-30",
-          "modified_date": null,
-          "indexed_date": "2026-10-31",
-          "doi": "10.1208/s12248-026-01311-1",
-          "pmid": "42963450",
-          "publication_types": [
-            "im",
-            "journal article"
-          ],
-          "correction": false,
-          "research_status": "indexed_primary_candidate",
-          "journal": "The AAPS journal",
-          "body_status": "abstract_only",
-          "source_id": "europepmc",
-          "source_name": "Europe PMC / PubMed 原始研究",
-          "source_type": "research",
-          "source_region": "Global",
-          "molecules": [
-            "survodutide"
-          ],
-          "brands": [],
-          "companies": [
-            "Competitor"
-          ],
-          "categories": [
-            "clinical",
-            "safety"
-          ],
-          "stage": "study_publication",
-          "jurisdiction": "未明确",
-          "event_date": "2026-10-30",
-          "event_date_basis": "研究首次发表日期；不是试验完成日期",
-          "priority": 35,
-          "fingerprint": "f3dc8d93602d3bb41613ecd6cee0b335396aa788e662d3b4a5bd1f54356d6896",
-          "trial_ids": []
+          "fingerprint": "6a195f6ae04561fd7e0aab639f81b800559511cad4cfc5bd0d104308bc4b1891",
+          "trial_ids": [],
+          "update_note": "同一来源出现新的相关正文版本；这是内容变更，不代表新的监管决定。"
         }
       ]
     }
@@ -911,8 +374,8 @@
       "region": "Global",
       "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
       "status": "ok",
-      "discovered": 230,
-      "accepted": 57,
+      "discovered": 176,
+      "accepted": 52,
       "warnings": []
     },
     {
@@ -920,63 +383,44 @@
       "name": "FDA GLP-1 配制药政策",
       "region": "US",
       "url": "https://www.fda.gov/drugs/drug-alerts-and-statements/fda-clarifies-policies-compounders-national-glp-1-supply-begins-stabilize",
-      "status": "ok",
-      "discovered": 1,
-      "accepted": 1,
-      "warnings": []
+      "status": "failed",
+      "discovered": 0,
+      "accepted": 0,
+      "warnings": [],
+      "error": "FetchError: HTTP 404"
     },
     {
       "id": "fda_press",
       "name": "FDA 新闻公告",
       "region": "US",
       "url": "https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/press-releases/rss.xml",
-      "status": "partial",
-      "discovered": 20,
+      "status": "failed",
+      "discovered": 0,
       "accepted": 0,
-      "warnings": [
-        "rejected off-domain article link",
-        "rejected off-domain article link",
-        "rejected off-domain article link",
-        "rejected off-domain article link",
-        "rejected off-domain article link",
-        "rejected off-domain article link",
-        "rejected off-domain article link",
-        "rejected off-domain article link",
-        "rejected off-domain article link",
-        "rejected off-domain article link",
-        "rejected off-domain article link",
-        "rejected off-domain article link",
-        "rejected off-domain article link",
-        "rejected off-domain article link",
-        "rejected off-domain article link",
-        "rejected off-domain article link",
-        "rejected off-domain article link",
-        "rejected off-domain article link",
-        "rejected off-domain article link",
-        "rejected off-domain article link"
-      ]
+      "warnings": [],
+      "error": "FetchError: HTTP 404"
     },
     {
       "id": "fda_safety",
       "name": "FDA 药物安全通报",
       "region": "US",
       "url": "https://www.fda.gov/drugs/drug-safety-and-availability/drug-safety-communications",
-      "status": "partial",
-      "discovered": 1,
-      "accepted": 1,
-      "warnings": [
-        "current listing only; no claim of exhaustive regional coverage"
-      ]
+      "status": "failed",
+      "discovered": 0,
+      "accepted": 0,
+      "warnings": [],
+      "error": "FetchError: HTTP 404"
     },
     {
       "id": "fda_unapproved",
       "name": "FDA 未获批 GLP-1 风险",
       "region": "US",
       "url": "https://www.fda.gov/drugs/drug-alerts-and-statements/fdas-concerns-unapproved-glp-1-drugs-used-weight-loss",
-      "status": "ok",
-      "discovered": 1,
-      "accepted": 1,
-      "warnings": []
+      "status": "failed",
+      "discovered": 0,
+      "accepted": 0,
+      "warnings": [],
+      "error": "FetchError: HTTP 404"
     },
     {
       "id": "health_canada",
@@ -995,22 +439,21 @@
       "name": "Eli Lilly 官方公告",
       "region": "Global",
       "url": "https://investor.lilly.com/rss/news-releases.xml?items=100",
-      "status": "ok",
-      "discovered": 10,
-      "accepted": 2,
-      "warnings": []
+      "status": "failed",
+      "discovered": 0,
+      "accepted": 0,
+      "warnings": [],
+      "error": "FetchError: HTTP 403"
     },
     {
       "id": "mhra_news",
       "name": "MHRA 官方消息",
       "region": "UK",
       "url": "https://www.gov.uk/government/organisations/medicines-and-healthcare-products-regulatory-agency.atom",
-      "status": "partial",
+      "status": "ok",
       "discovered": 20,
       "accepted": 0,
-      "warnings": [
-        "feed window shorter than requested lookback; archives not exhaustively searched"
-      ]
+      "warnings": []
     },
     {
       "id": "mhra_safety",
@@ -1060,12 +503,11 @@
       "name": "TGA 安全更新",
       "region": "AU",
       "url": "https://www.tga.gov.au/news/safety-updates",
-      "status": "partial",
-      "discovered": 1,
+      "status": "failed",
+      "discovered": 0,
       "accepted": 0,
-      "warnings": [
-        "current listing only; no claim of exhaustive regional coverage"
-      ]
+      "warnings": [],
+      "error": "FetchError: TimeoutError"
     }
   ],
   "review_queue": [

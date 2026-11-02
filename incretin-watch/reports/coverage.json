@@ -51,8 +51,8 @@
     "region": "Global",
     "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
     "status": "ok",
-    "discovered": 230,
-    "accepted": 57,
+    "discovered": 176,
+    "accepted": 52,
     "warnings": []
   },
   {
@@ -60,63 +60,44 @@
     "name": "FDA GLP-1 配制药政策",
     "region": "US",
     "url": "https://www.fda.gov/drugs/drug-alerts-and-statements/fda-clarifies-policies-compounders-national-glp-1-supply-begins-stabilize",
-    "status": "ok",
-    "discovered": 1,
-    "accepted": 1,
-    "warnings": []
+    "status": "failed",
+    "discovered": 0,
+    "accepted": 0,
+    "warnings": [],
+    "error": "FetchError: HTTP 404"
   },
   {
     "id": "fda_press",
     "name": "FDA 新闻公告",
     "region": "US",
     "url": "https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/press-releases/rss.xml",
-    "status": "partial",
-    "discovered": 20,
+    "status": "failed",
+    "discovered": 0,
     "accepted": 0,
-    "warnings": [
-      "rejected off-domain article link",
-      "rejected off-domain article link",
-      "rejected off-domain article link",
-      "rejected off-domain article link",
-      "rejected off-domain article link",
-      "rejected off-domain article link",
-      "rejected off-domain article link",
-      "rejected off-domain article link",
-      "rejected off-domain article link",
-      "rejected off-domain article link",
-      "rejected off-domain article link",
-      "rejected off-domain article link",
-      "rejected off-domain article link",
-      "rejected off-domain article link",
-      "rejected off-domain article link",
-      "rejected off-domain article link",
-      "rejected off-domain article link",
-      "rejected off-domain article link",
-      "rejected off-domain article link",
-      "rejected off-domain article link"
-    ]
+    "warnings": [],
+    "error": "FetchError: HTTP 404"
   },
   {
     "id": "fda_safety",
     "name": "FDA 药物安全通报",
     "region": "US",
     "url": "https://www.fda.gov/drugs/drug-safety-and-availability/drug-safety-communications",
-    "status": "partial",
-    "discovered": 1,
-    "accepted": 1,
-    "warnings": [
-      "current listing only; no claim of exhaustive regional coverage"
-    ]
+    "status": "failed",
+    "discovered": 0,
+    "accepted": 0,
+    "warnings": [],
+    "error": "FetchError: HTTP 404"
   },
   {
     "id": "fda_unapproved",
     "name": "FDA 未获批 GLP-1 风险",
     "region": "US",
     "url": "https://www.fda.gov/drugs/drug-alerts-and-statements/fdas-concerns-unapproved-glp-1-drugs-used-weight-loss",
-    "status": "ok",
-    "discovered": 1,
-    "accepted": 1,
-    "warnings": []
+    "status": "failed",
+    "discovered": 0,
+    "accepted": 0,
+    "warnings": [],
+    "error": "FetchError: HTTP 404"
   },
   {
     "id": "health_canada",
@@ -135,22 +116,21 @@
     "name": "Eli Lilly 官方公告",
     "region": "Global",
     "url": "https://investor.lilly.com/rss/news-releases.xml?items=100",
-    "status": "ok",
-    "discovered": 10,
-    "accepted": 2,
-    "warnings": []
+    "status": "failed",
+    "discovered": 0,
+    "accepted": 0,
+    "warnings": [],
+    "error": "FetchError: HTTP 403"
   },
   {
     "id": "mhra_news",
     "name": "MHRA 官方消息",
     "region": "UK",
     "url": "https://www.gov.uk/government/organisations/medicines-and-healthcare-products-regulatory-agency.atom",
-    "status": "partial",
+    "status": "ok",
     "discovered": 20,
     "accepted": 0,
-    "warnings": [
-      "feed window shorter than requested lookback; archives not exhaustively searched"
-    ]
+    "warnings": []
   },
   {
     "id": "mhra_safety",
@@ -200,11 +180,10 @@
     "name": "TGA 安全更新",
     "region": "AU",
     "url": "https://www.tga.gov.au/news/safety-updates",
-    "status": "partial",
-    "discovered": 1,
+    "status": "failed",
+    "discovered": 0,
     "accepted": 0,
-    "warnings": [
-      "current listing only; no claim of exhaustive regional coverage"
-    ]
+    "warnings": [],
+    "error": "FetchError: TimeoutError"
   }
 ]

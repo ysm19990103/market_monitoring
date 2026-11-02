@@ -219,9 +219,10 @@
     "9046a733931fc3c12bfa2bc125499018761fc2316de3d9c6466e943a27eedcb8": {
       "url": "https://pubmed.ncbi.nlm.nih.gov/42962687",
       "revisions": [
-        "a03492fcdaee1c260190ceecf10ae0a45f1dda34473779252fb4c42e68e4f747"
+        "a03492fcdaee1c260190ceecf10ae0a45f1dda34473779252fb4c42e68e4f747",
+        "ef1dc54d2d8ff3ffc10b9c416dda1ed30864be2d9195e568c395039021b30b49"
       ],
-      "last_seen": "2026-11-01"
+      "last_seen": "2026-11-02"
     },
     "a7a594d82536d5d1dab1c7607779deb6fa6a889223cb3a7775a50e2d854d1640": {
       "url": "https://pubmed.ncbi.nlm.nih.gov/42803597",
@@ -240,9 +241,10 @@
     "3c6ebb977815c4ab9d1f8d1ee136d16b5f9e74324ebe6c7603aa08e8d98ec3aa": {
       "url": "https://pubmed.ncbi.nlm.nih.gov/42963299",
       "revisions": [
-        "65fda59cc72b09c0f359c523097ff671bf945c0e9daa042874c6907bb2fb66a3"
+        "65fda59cc72b09c0f359c523097ff671bf945c0e9daa042874c6907bb2fb66a3",
+        "6a195f6ae04561fd7e0aab639f81b800559511cad4cfc5bd0d104308bc4b1891"
       ],
-      "last_seen": "2026-11-01"
+      "last_seen": "2026-11-02"
     },
     "0d94c3037c5977d06128fb10acb70b8c651dc3fb3510a368b470625011c0d785": {
       "url": "https://pubmed.ncbi.nlm.nih.gov/42960245",
@@ -257,6 +259,13 @@
         "f3dc8d93602d3bb41613ecd6cee0b335396aa788e662d3b4a5bd1f54356d6896"
       ],
       "last_seen": "2026-11-01"
+    },
+    "d1f9b7e4eefc41a9bd4a00bdbbc13422d47a5a1b92ed6a4fdd086da6a8914d95": {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42962407",
+      "revisions": [
+        "00e7d2dd52aa90e6632182b0ce39b27a3fc68116879065bfbbe0ff4b0f3fd547"
+      ],
+      "last_seen": "2026-11-02"
     }
   },
   "events": {
@@ -1836,7 +1845,140 @@
         "https://pubmed.ncbi.nlm.nih.gov/42963450"
       ],
       "reported_at": "2026-11-01"
+    },
+    "086f6d24786255b56815": {
+      "representative": {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/42962687",
+        "title": "Efficacy and safety of oral orforglipron in Japanese participants with obesity disease (ATTAIN-J): a double-blind, randomised, placebo-controlled, parallel-group, phase 3 trial.",
+        "published_date": "2026-10-30",
+        "modified_date": null,
+        "indexed_date": "2026-10-31",
+        "doi": "10.1016/s2213-8587(26)00232-9",
+        "pmid": "42962687",
+        "publication_types": [
+          "journal article"
+        ],
+        "correction": false,
+        "research_status": "indexed_primary_candidate",
+        "journal": "The lancet. Diabetes & endocrinology",
+        "body_status": "abstract_only",
+        "source_id": "europepmc",
+        "source_name": "Europe PMC / PubMed 原始研究",
+        "source_type": "research",
+        "source_region": "Global",
+        "molecules": [
+          "orforglipron",
+          "semaglutide",
+          "tirzepatide"
+        ],
+        "brands": [],
+        "companies": [
+          "Eli Lilly",
+          "Novo Nordisk"
+        ],
+        "categories": [
+          "clinical",
+          "safety"
+        ],
+        "stage": "study_publication",
+        "jurisdiction": "JP",
+        "event_date": null,
+        "event_date_basis": "页面变更首次观察于 2026-11-02；实际事件日期待确认",
+        "priority": 75,
+        "fingerprint": "ef1dc54d2d8ff3ffc10b9c416dda1ed30864be2d9195e568c395039021b30b49",
+        "trial_ids": [
+          "NCT05931380"
+        ],
+        "update_note": "同一来源出现新的相关正文版本；这是内容变更，不代表新的监管决定。"
+      },
+      "source_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/42962687"
+      ],
+      "reported_at": "2026-11-02"
+    },
+    "cd8897dd87f8db164ece": {
+      "representative": {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/42962407",
+        "title": "Incretin-based therapies in psychiatry: A landscape analysis of ongoing randomized trials registered on ClinicalTrials.gov.",
+        "published_date": "2026-10-21",
+        "modified_date": null,
+        "indexed_date": "2026-10-31",
+        "doi": "10.1016/j.jpsychires.2026.10.039",
+        "pmid": "42962407",
+        "publication_types": [
+          "journal article"
+        ],
+        "correction": false,
+        "research_status": "indexed_primary_candidate",
+        "journal": "Journal of psychiatric research",
+        "body_status": "abstract_only",
+        "source_id": "europepmc",
+        "source_name": "Europe PMC / PubMed 原始研究",
+        "source_type": "research",
+        "source_region": "Global",
+        "molecules": [],
+        "brands": [],
+        "companies": [],
+        "categories": [
+          "clinical"
+        ],
+        "stage": "study_publication",
+        "jurisdiction": "未明确",
+        "event_date": "2026-10-21",
+        "event_date_basis": "研究首次发表日期；不是试验完成日期",
+        "priority": 40,
+        "fingerprint": "00e7d2dd52aa90e6632182b0ce39b27a3fc68116879065bfbbe0ff4b0f3fd547",
+        "trial_ids": []
+      },
+      "source_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/42962407"
+      ],
+      "reported_at": "2026-11-02"
+    },
+    "279ac163e6b2fe03eb20": {
+      "representative": {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/42963299",
+        "title": "Activities of daily living and health status benefits of semaglutide in very old patients with heart failure, type 2 diabetes, and obesity: Real-world practice study.",
+        "published_date": "2026-10-30",
+        "modified_date": null,
+        "indexed_date": "2026-10-31",
+        "doi": "10.1016/j.medcli.2026.107663",
+        "pmid": "42963299",
+        "publication_types": [
+          "journal article"
+        ],
+        "correction": false,
+        "research_status": "indexed_primary_candidate",
+        "journal": "Medicina clinica",
+        "body_status": "abstract_only",
+        "source_id": "europepmc",
+        "source_name": "Europe PMC / PubMed 原始研究",
+        "source_type": "research",
+        "source_region": "Global",
+        "molecules": [
+          "semaglutide"
+        ],
+        "brands": [],
+        "companies": [
+          "Novo Nordisk"
+        ],
+        "categories": [
+          "clinical"
+        ],
+        "stage": "study_publication",
+        "jurisdiction": "未明确",
+        "event_date": null,
+        "event_date_basis": "页面变更首次观察于 2026-11-02；实际事件日期待确认",
+        "priority": 40,
+        "fingerprint": "6a195f6ae04561fd7e0aab639f81b800559511cad4cfc5bd0d104308bc4b1891",
+        "trial_ids": [],
+        "update_note": "同一来源出现新的相关正文版本；这是内容变更，不代表新的监管决定。"
+      },
+      "source_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/42963299"
+      ],
+      "reported_at": "2026-11-02"
     }
   },
-  "last_successful_run": "2026-11-01T14:07:26+08:00"
+  "last_successful_run": "2026-11-02T13:56:56+08:00"
 }
