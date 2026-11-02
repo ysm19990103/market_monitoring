@@ -29,6 +29,16 @@ The latest reviewed report contained 8 new/substantially updated events and supp
 
 This is a point-in-time review of accessible repository history, logs and artifacts, not a guarantee for future changes or an inspection of secret-store values. No history rewrite or log/artifact deletion was needed.
 
+### Publication and live verification on 2026-11-02
+
+Repository visibility was changed to **public** and confirmed both in repository settings and through the repository API (`private: false`, `visibility: public`).
+
+[Post-publication workflow run 41396930980](https://github.com/ysm19990103/market_monitoring/actions/runs/41396930980) completed successfully on `main`. All 32 tests passed, collection and report generation completed, the report artifact uploaded successfully, and the built-in GitHub authentication pushed the reports and deduplication state in commit `82b5ac1b9f82b9a551858242215d2af1bb4b6b2b`.
+
+The new output, log, commit metadata and artifact were also checked. Cumulative reviewed scope through that report commit was 10 commits, 57 distinct historical blobs, 11 job logs from 7 runs, and 5 verified artifact ZIPs containing 20 text files. No actual credentials or private data were found; the additional numeric scan match was an artifact identifier.
+
+The new report was generated at **2026-11-02 13:56:56 Asia/Shanghai**, with 3 new/substantially updated events and 24 suppressed duplicates. Source health was **5 OK, 4 partial, 8 failed** out of 17 sources. Failures were FDA's four configured endpoints (HTTP 404), Lilly (HTTP 403), NMPA (HTTP 412), ANVISA (article-pattern mismatch) and TGA (timeout). These are unresolved collection limitations; the successful workflow does not establish full coverage or establish why source availability changed. See [the latest source health](incretin-watch/reports/coverage.json) for current details. Rule-based interpretation and uncertain dates still require human review.
+
 ## If a credential is accidentally committed
 
 Revoke or rotate the credential at its provider immediately. Remove it from current files and, where required, Git history, logs, and artifacts. Deleting the current file alone does not remove earlier copies. Never put the exposed value in a public issue.
