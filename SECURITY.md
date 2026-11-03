@@ -7,7 +7,7 @@ This repository contains software and reports derived from public sources. Keep 
 - Collection uses the configured public sources, and event analysis runs locally. No external model integration or personal credential configuration is required.
 - Never place a real credential in a commit, example, configuration file, report, command argument, or log. Do not enable shell tracing or print environment variables in workflows.
 - The repository ignores common local environment and credential files. Ignore rules do not protect already tracked files or prevent a forced add; inspect staged changes before committing.
-- The scheduled workflow uses GitHub's built-in repository authentication to save reports. It does not reference user-supplied secrets.
+- Manual GitHub runs can opt in to saving reports on `main` using GitHub's built-in repository authentication. They do not reference user-supplied secrets. No collection schedule is configured in the proposed version.
 
 ## Publication review
 
@@ -38,6 +38,20 @@ Repository visibility was changed to **public** and confirmed both in repository
 The new output, log, commit metadata and artifact were also checked. Cumulative reviewed scope through that report commit was 10 commits, 57 distinct historical blobs, 11 job logs from 7 runs, and 5 verified artifact ZIPs containing 20 text files. No actual credentials or private data were found; the additional numeric scan match was an artifact identifier.
 
 The new report was generated at **2026-11-02 13:56:56 Asia/Shanghai**, with 3 new/substantially updated events and 24 suppressed duplicates. Source health was **5 OK, 4 partial, 8 failed** out of 17 sources. Failures were FDA's four configured endpoints (HTTP 404), Lilly (HTTP 403), NMPA (HTTP 412), ANVISA (article-pattern mismatch) and TGA (timeout). These are unresolved collection limitations; the successful workflow does not establish full coverage or establish why source availability changed. See [the latest source health](incretin-watch/reports/coverage.json) for current details. Rule-based interpretation and uncertain dates still require human review.
+
+### Manual operation and source repair review — 2026-11-03
+
+The existing collection workflow was disabled manually in GitHub before preparing this PR. The proposed workflow removes daily scheduling and collection-on-push, retains manual dispatch, and requires an explicit `persist_reports` choice on `main` to save reports/state. Do not re-enable the old workflow before merging the trigger removal.
+
+The proposed code/configuration, synthetic fixtures, documentation, workflow changes, existing report/state snapshot and all 65 distinct reachable historical blobs were scanned for provider tokens, private-key material and credential assignments. No actual credentials were found. Manual review found no private datasets or private contact information in the change; credential-like URLs in tests contain only dummy values. This review does not inspect repository secret-store values and does not guarantee future source content.
+
+The built wheel contains 14 package/metadata files, including only the public default configuration and application code; it excludes repository reports, deduplication state, HTTP cache and local environment files. It was exercised from an empty directory. The offline suite has 57 passing tests. Existing tracked reports and state are byte-unchanged. The new `--check-sources` mode does not even read state, and PR diagnostics use read-only GitHub permissions with checkout credentials not persisted. Only source-health JSON and run metadata are uploaded.
+
+Error reports now use controlled failure categories and HTTP status codes instead of arbitrary exception strings. URLs containing user credentials or recognized credential parameters are rejected. Explicit access restrictions, rate limits and human-verification pages do not trigger alternate endpoints. Requests remain HTTPS-only; FDA's published legacy HTTP article links are upgraded only for the verified FDA hostname. No API key, private database, browser fingerprint spoofing or remote model service is introduced.
+
+The four logs and two-file health artifact from PR run 41638337770 were also reviewed; authentication values were masked and no real credentials or private content were found. The artifact ZIP digest matched its recorded digest.
+
+Source recovery and remaining limitations are documented in [SOURCE_VERIFICATION.md](incretin-watch/docs/SOURCE_VERIFICATION.md). A successful test/diagnostic workflow is not a claim of complete source coverage.
 
 ## If a credential is accidentally committed
 

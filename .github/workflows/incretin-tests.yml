@@ -1,10 +1,10 @@
 name: Incretin watch tests
 on:
   pull_request:
-    paths: ['incretin-watch/**', '.github/workflows/incretin-tests.yml']
+    paths: ['incretin-watch/**', '.github/workflows/incretin-tests.yml', '.github/workflows/incretin-watch.yml']
   push:
     branches: [main]
-    paths: ['incretin-watch/src/**', 'incretin-watch/tests/**', 'incretin-watch/config.json', 'incretin-watch/pyproject.toml', '.github/workflows/incretin-tests.yml']
+    paths: ['incretin-watch/src/**', 'incretin-watch/tests/**', 'incretin-watch/config.json', 'incretin-watch/pyproject.toml', '.github/workflows/incretin-tests.yml', '.github/workflows/incretin-watch.yml']
 permissions:
   contents: read
 jobs:
@@ -15,8 +15,60 @@ jobs:
         python: ['3.11', '3.12', '3.13']
     steps:
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
       - uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python }}
       - run: python -m pip install ./incretin-watch
       - run: python -m unittest discover -s incretin-watch/tests -v
+      - name: Test installed package outside checkout
+        run: |
+          cd "$RUNNER_TEMP"
+          incretin-watch --help
+          python -c 'import json; from importlib.resources import files; c = json.loads(files("incretin_watch").joinpath("default_config.json").read_text()); assert len(c["sources"]) == 17'
+  source-check:
+    # A read-only, PR-scoped diagnostic, never a scheduled reporting job.
+    if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
+    needs: tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install ./incretin-watch
+      - name: Check live endpoints without advancing state
+        run: |
+          incretin-watch --config incretin-watch/config.json --check-sources --output "$RUNNER_TEMP/source-check" --cache "$RUNNER_TEMP/source-cache"
+          git diff --exit-code -- incretin-watch/state incretin-watch/reports
+      - name: Summarize actual coverage
+        if: always()
+        env:
+          COVERAGE_PATH: ${{ runner.temp }}/source-check/coverage.json
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          path = Path(os.environ['COVERAGE_PATH'])
+          if not path.exists():
+              raise SystemExit('No coverage evidence produced')
+          health = json.loads(path.read_text())
+          lines = ['## Live source check', '', 'Job success means the diagnostic completed, not that every source recovered.', '', '| Source | Status | Discovered | Accepted | Failure |', '|---|---|---:|---:|---|']
+          for h in health:
+              lines.append(f"| {h['id']} | {h['status']} | {h['discovered']} | {h['accepted']} | {h.get('error', '')} |")
+          lines += ['', 'See coverage.json for endpoint attempts, article failures and coverage limits. No reports or deduplication state were changed.']
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as f:
+              f.write('\n'.join(lines) + '\n')
+          print('\n'.join(lines))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: source-check-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/source-check/*.json
+          if-no-files-found: error
+          retention-days: 14

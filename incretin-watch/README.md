@@ -2,7 +2,7 @@
 
 为礼来（Eli Lilly）和诺和诺德（Novo Nordisk）的肠促胰素产品自动整理重要进展，输出可追溯的 Markdown 简报、JSON、CSV。包括新适应证/监管审评、政策、安全性、当地上市、重大临床证据、价格/供给及竞争事件。
 
-默认每天北京时间 **08:17** 在 GitHub Actions 执行，回看 14 天；GitHub 定时任务不保证准点。还可在 Actions → **Incretin market watch** → **Run workflow** 手动运行。代码推入 `main` 时执行任务，报告提交不会再次触发采集。
+**仅按需运行，不设定时任务。** 安装后由使用者手动执行，默认回看 14 天；安装包不会创建后台服务、cron 或系统计划任务。GitHub Actions 仅保留 **Run workflow** 手动入口，不因代码推入 `main` 而采集。2026-11-03 已手动停用原采集工作流；本次 PR 合并、确认定时触发器删除后，才能重新启用此手动入口。
 
 ## 直接查看
 
@@ -31,6 +31,9 @@ incretin-watch --analysis rules
 ```
 
 ```bash
+# 只检查来源，不读取或推进去重状态，不覆盖已有简报
+incretin-watch --check-sources --output .cache/source-check
+
 # 只检查部分来源；状态仍然保留
 incretin-watch --sources lilly,novo,fda_press,ema_news,europepmc --lookback-days 30
 
@@ -39,6 +42,10 @@ incretin-watch --as-of 2026-10-30 --lookback-days 14 --state .cache/backfill-sta
 
 python -m unittest discover -s tests -v
 ```
+
+安装包包含默认公开来源配置；离开源码目录后也能运行。程序优先使用当前目录的 `config.json`，否则使用安装包配置；可用 `--config /path/to/config.json` 指定自己的公开来源配置。默认状态、报告和缓存相对当前目录保存，后续运行应使用同一个目录，或固定 `--state`、`--output` 和 `--cache`。重新安装不会重置已有状态。源码中的 `config.json` 与包内 `default_config.json` 必须同步，测试会检查两者一致。
+
+在新电脑上延续旧监测时，先复制已有 `state/state.json` 和报告，再运行。不要将去重状态视为可随意清空的缓存。
 
 `--strict-coverage` 在任一来源失败或部分覆盖时返回非零状态；默认继续生成有明确缺口说明的报告。所有来源失败时返回 2，不推进去重状态、不生成“无新进展”结论。源文件解析或状态结构异常会使任务失败，不能静默重建状态而重复报送。
 
@@ -53,7 +60,9 @@ python -m unittest discover -s tests -v
 | 其他 | TGA、Health Canada、ANVISA | 当前安全/新闻入口，非全部批准数据库 |
 | 原始研究 | Europe PMC 检索 MED/PubMed 原始研究摘要 | 首次发表/首次收录窗口；不把索引检索等同于已读取论文全文 |
 
-默认 17 个来源入口。所有文章链接均限制在配置中的官方域名；跳转离开白名单会被拒绝。优先使用官方来源，并保留论文 DOI/PMID。遵守网站访问限制，不绕过 CAPTCHA、登录或付费墙。**全球是关注范围，不是穷尽覆盖承诺**；新来源可以通过 `config.json` 加入。
+默认 17 个来源入口。所有文章链接均限制在配置中的官方域名；跳转离开白名单会被拒绝。FDA RSS 的旧 `http://www.fda.gov/` 文章链接仅升级为已核验的同站 HTTPS 地址，不发送 HTTP 请求。优先使用官方来源，并保留论文 DOI/PMID。遵守网站访问限制，不绕过 CAPTCHA、登录或付费墙。**全球是关注范围，不是穷尽覆盖承诺**；新来源可以通过 `config.json` 加入。
+
+来源健康文件分别记录入口请求和文章正文失败，保留尝试的公开入口、HTTP 状态和失败类别。404/410 仅表示本次请求未找到内容，不能单独证明网页永久下线；HTTP 200 但结构错误也不会标为正常。FDA 新闻 RSS 可在普通请求/解析失败时使用官方新闻列表，TGA 可在已发布的 RSS 与原列表间降级；降级成功仍标为部分覆盖。401/403/412/429/451 或明确的人机验证页面不会触发备用入口，需人工处理或稍后重新手动运行。详见[验证记录](docs/SOURCE_VERIFICATION.md)。
 
 主要产品检索包含 Mounjaro、Zepbound、Trulicity、Foundayo、Ozempic、Wegovy、Rybelsus、Victoza、Saxenda 和含利拉鲁肽的复方 Xultophy，以及常用中文/日文名称。药物列表是发现词表，不是每个地区/适应证的实时许可数据库。为避免漏掉竞争变化，也发现 mazdutide、ecnoglutide 等当地产品及部分重要在研竞品；不据此推定其全球已上市。产品词表检查日：2026-10-30。
 
@@ -78,7 +87,9 @@ python -m unittest discover -s tests -v
 
 跨语言改写和改换标题仍可能漏合并；相同 URL 的编辑变更也可能触发复核。相似度去重不是已完成的人工事实审查。源站改变结构会通过健康状态显示，适配器和相关测试需要维护。扩展到新的制剂、品牌、监管入口时更新配置和测试。
 
-GitHub Actions 需要仓库允许 Actions 和 `contents: write`；分支保护可能阻止自动提交。任务总时限 30 分钟，具体可用额度取决于 GitHub 账户和仓库设置。如写回失败，已生成的本次简报仍可从 Actions artifacts 下载。
+GitHub 手动任务默认只提供本次报告 artifact。需要延续仓库去重状态时，在 `main` 上勾选 **persist_reports**，才会使用 GitHub 内置仓库认证提交报告和状态；其他分支不能写回 `main`。工作流的 `contents: write` 仅用于此显式选择，不需要个人密钥。未勾选时不会保存本次新增去重状态，下次云端运行仍以仓库当前状态为起点。任务总时限 30 分钟，写回失败时可下载报告 artifact。
+
+PR 验证使用只读权限：Python 3.11/3.12/3.13 离线回归测试，以及一次来源健康检查（仅同仓库 PR）。健康检查只上传 `coverage.json` 和检查时间，不提交报告/状态，不上传缓存。该检查成功只说明诊断已完成，各来源是否恢复需看健康结果；它不是周期监测。
 
 ## 实现依据
 

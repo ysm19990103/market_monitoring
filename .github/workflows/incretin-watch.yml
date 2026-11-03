@@ -1,9 +1,6 @@
 name: Incretin market watch
 
 on:
-  schedule:
-    # UTC 00:17 = Asia/Shanghai 08:17. GitHub schedules may be delayed.
-    - cron: '17 0 * * *'
   workflow_dispatch:
     inputs:
       lookback_days:
@@ -11,13 +8,11 @@ on:
         required: true
         default: '14'
         type: string
-  push:
-    branches: [main]
-    paths:
-      - 'incretin-watch/src/**'
-      - 'incretin-watch/config.json'
-      - 'incretin-watch/pyproject.toml'
-      - '.github/workflows/incretin-watch.yml'
+      persist_reports:
+        description: 'Commit reports and deduplication state (main branch only)'
+        required: true
+        default: false
+        type: boolean
 
 permissions:
   contents: write
@@ -28,6 +23,7 @@ concurrency:
 
 jobs:
   collect:
+    if: github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     timeout-minutes: 30
     defaults:
@@ -50,12 +46,15 @@ jobs:
         id: collect
         env:
           LOOKBACK_DAYS: ${{ inputs.lookback_days || '14' }}
-        run: incretin-watch --lookback-days "$LOOKBACK_DAYS" --analysis rules
+        run: |
+          # Do not upload previous-run aliases if the new collection fails.
+          rm -f reports/latest.md reports/latest.json reports/latest.csv reports/coverage.json
+          incretin-watch --lookback-days "$LOOKBACK_DAYS" --analysis rules
       - name: Show report
         if: steps.collect.outcome == 'success'
         run: head -c 900000 reports/latest.md >> "$GITHUB_STEP_SUMMARY"
       - name: Upload report and source health
-        if: always()
+        if: always() && (steps.collect.outcome == 'success' || steps.collect.outcome == 'failure')
         uses: actions/upload-artifact@v4
         with:
           name: incretin-report-${{ github.run_id }}-${{ github.run_attempt }}
@@ -65,7 +64,7 @@ jobs:
           if-no-files-found: warn
           retention-days: 30
       - name: Persist reports and deduplication state
-        if: steps.collect.outcome == 'success'
+        if: steps.collect.outcome == 'success' && inputs.persist_reports && github.ref == 'refs/heads/main'
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
