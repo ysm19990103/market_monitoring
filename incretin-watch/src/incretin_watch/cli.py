@@ -2,6 +2,8 @@ from __future__ import annotations
 
 import argparse
 import fcntl
+import json
+from importlib.resources import files
 from datetime import date, datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -16,7 +18,7 @@ from .report import write_reports
 
 def main(argv=None):
     p = argparse.ArgumentParser(description="Primary-source incretin market intelligence")
-    p.add_argument("--config", type=Path, default=Path("config.json"))
+    p.add_argument("--config", type=Path, help="configuration path; defaults to local config.json or bundled public sources")
     p.add_argument("--state", type=Path, default=Path("state/state.json"))
     p.add_argument("--output", type=Path, default=Path("reports"))
     p.add_argument("--cache", type=Path, default=Path(".cache/http"))
@@ -25,8 +27,10 @@ def main(argv=None):
     p.add_argument("--sources", help="comma-separated configured source IDs")
     p.add_argument("--analysis", choices=["rules"], default="rules", help="local rule-based analysis")
     p.add_argument("--strict-coverage", action="store_true", help="nonzero exit on any partial/failed source")
+    p.add_argument("--check-sources", action="store_true", help="write source health only; never read or advance deduplication state")
     args = p.parse_args(argv)
-    config = load_json(args.config, None)
+    config_path = args.config or (Path("config.json") if Path("config.json").exists() else None)
+    config = load_json(config_path, None) if config_path else json.loads(files("incretin_watch").joinpath("default_config.json").read_text(encoding="utf-8"))
     if not config or config.get("config_version") != 1:
         p.error("missing or unsupported config")
     days = args.lookback_days or config["lookback_days"]
@@ -38,7 +42,6 @@ def main(argv=None):
     selected = set(args.sources.split(",")) if args.sources else None
     if selected and selected - {s["id"] for s in config["sources"]}:
         p.error("unknown source ID")
-    args.state.parent.mkdir(parents=True, exist_ok=True)
     # Lock is outside committed state. GitHub also serializes the entire job.
     args.cache.mkdir(parents=True, exist_ok=True)
     with (args.cache / "run.lock").open("w") as lock:
@@ -46,9 +49,17 @@ def main(argv=None):
             fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
         except BlockingIOError:
             p.error("another run is active in this workspace")
-        state = load_json(args.state, {"schema_version": 1, "documents": {}, "events": {}})
+        state = None if args.check_sources else load_json(args.state, {"schema_version": 1, "documents": {}, "events": {}})
         client = Client(args.cache, config["allowed_domains"])
         rows, health = collect(config, client, since.isoformat(), until.isoformat(), selected)
+        if args.check_sources:
+            write_json(args.output / "coverage.json", health)
+            write_json(args.output / "coverage-run.json", {"checked_at": now.isoformat(timespec="seconds"),
+                       "since": since.isoformat(), "until": until.isoformat(), "mode": "check-sources"})
+            print("Source check complete; deduplication state and reports were not advanced.", flush=True)
+            if all(h["status"] == "failed" for h in health):
+                return 2
+            return 3 if args.strict_coverage and any(h["status"] != "ok" for h in health) else 0
         # Local diagnostics only; .cache/ is ignored by git and never included in artifacts.
         write_json(args.cache / "last-records.json", rows)
         if all(h["status"] == "failed" for h in health):

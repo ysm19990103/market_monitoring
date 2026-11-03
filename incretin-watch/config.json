@@ -242,10 +242,11 @@
     {
       "id": "lilly",
       "name": "Eli Lilly 官方公告",
-      "url": "https://investor.lilly.com/rss/news-releases.xml?items=100",
+      "url": "https://investor.lilly.com/rss/news-releases.xml?items=10",
       "kind": "rss",
       "region": "Global",
-      "type": "company"
+      "type": "company",
+      "endpoint_reference": "https://investor.lilly.com/rss-news-feeds"
     },
     {
       "id": "novo",
@@ -261,7 +262,19 @@
       "url": "https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/press-releases/rss.xml",
       "kind": "rss",
       "region": "US",
-      "type": "regulator"
+      "type": "regulator",
+      "alternatives": [
+        {
+          "url": "https://www.fda.gov/news-events/fda-newsroom/press-announcements",
+          "kind": "html",
+          "selector": "main a[href]",
+          "link_pattern": "^https://www\\.fda\\.gov/news-events/press-announcements/[^/]+$"
+        }
+      ],
+      "endpoint_reference": "https://www.fda.gov/about-fda/contact-fda/subscribe-podcasts-and-news-feeds",
+      "https_link_hosts": [
+        "www.fda.gov"
+      ]
     },
     {
       "id": "fda_safety",
@@ -270,8 +283,9 @@
       "kind": "html",
       "region": "US",
       "type": "regulator",
-      "selector": "main a[href]",
-      "link_pattern": "/drugs/(drug-safety-and-availability|drug-safety-communications)/"
+      "selector": "main table a[href]",
+      "link_pattern": "/drugs/(drug-safety-and-availability|drug-safety-communications)/",
+      "date_order": "mdy"
     },
     {
       "id": "fda_compounding",
@@ -344,12 +358,19 @@
     {
       "id": "tga",
       "name": "TGA 安全更新",
-      "url": "https://www.tga.gov.au/news/safety-updates",
-      "kind": "html",
+      "url": "https://tga.gov.au/feeds/article/safety-updates.xml",
+      "kind": "rss",
       "region": "AU",
       "type": "regulator",
-      "selector": "main a[href]",
-      "link_pattern": "/news/(safety-updates|safety-alerts)/"
+      "endpoint_reference": "https://www.tga.gov.au/news/email-subscriptions/rss-feeds",
+      "alternatives": [
+        {
+          "url": "https://www.tga.gov.au/news/safety-updates",
+          "kind": "html",
+          "selector": "main a[href]",
+          "link_pattern": "/news/(safety-updates|safety-alerts)/"
+        }
+      ]
     },
     {
       "id": "health_canada",
@@ -362,12 +383,13 @@
     {
       "id": "anvisa",
       "name": "ANVISA 官方新闻",
-      "url": "https://www.gov.br/anvisa/pt-br/comunicacao/noticias",
+      "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa",
       "kind": "html",
       "region": "BR",
       "type": "regulator",
-      "selector": "main a[href], article a[href]",
-      "link_pattern": "/(noticias|noticias-anvisa)/[^/]+"
+      "selector": "main a[href], #view a[href]",
+      "link_pattern": "^https://www\\.gov\\.br/anvisa/pt-br/assuntos/noticias-anvisa/\\d{4}/[^/]+$",
+      "date_order": "dmy"
     },
     {
       "id": "cms",
@@ -388,5 +410,6 @@
       "type": "research",
       "max_pages": 6
     }
-  ]
+  ],
+  "endpoints_reviewed": "2026-11-03"
 }
