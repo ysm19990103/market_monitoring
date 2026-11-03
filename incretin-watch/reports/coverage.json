@@ -28,11 +28,10 @@
     "region": "EU",
     "url": "https://www.ema.europa.eu/en/human-medicine-new.xml",
     "status": "partial",
-    "discovered": 240,
-    "accepted": 2,
+    "discovered": 225,
+    "accepted": 1,
     "warnings": [
-      "article fetch failed: https://www.ema.europa.eu/en/medicines/human/EPAR/wegovy (FetchError)",
-      "article fetch failed: https://www.ema.europa.eu/en/medicines/human/EPAR/victoza (FetchError)"
+      "article fetch failed: https://www.ema.europa.eu/en/medicines/human/EPAR/wegovy (FetchError)"
     ]
   },
   {
@@ -41,7 +40,7 @@
     "region": "EU",
     "url": "https://www.ema.europa.eu/en/news.xml",
     "status": "ok",
-    "discovered": 8,
+    "discovered": 7,
     "accepted": 0,
     "warnings": []
   },
@@ -52,7 +51,7 @@
     "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
     "status": "ok",
     "discovered": 176,
-    "accepted": 52,
+    "accepted": 44,
     "warnings": []
   },
   {
@@ -159,8 +158,8 @@
     "region": "Global",
     "url": "https://www.novonordisk.com/bin/nncorp/news-search",
     "status": "ok",
-    "discovered": 3,
-    "accepted": 3,
+    "discovered": 2,
+    "accepted": 2,
     "warnings": []
   },
   {

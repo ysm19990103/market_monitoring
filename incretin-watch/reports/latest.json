@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "generated_at": "2026-11-02T14:06:39+08:00",
-    "since": "2026-10-20",
-    "until": "2026-11-02",
-    "duplicates": 27,
+    "generated_at": "2026-11-03T14:49:21+08:00",
+    "since": "2026-10-21",
+    "until": "2026-11-03",
+    "duplicates": 23,
     "analysis_note": "本次使用本地规则分析：核心信息保留原文摘录，三维影响为条件性模板，仍需人工复核。",
     "coverage_complete": false,
     "scope": "configured official sources and indexed primary literature"
@@ -39,11 +39,10 @@
       "region": "EU",
       "url": "https://www.ema.europa.eu/en/human-medicine-new.xml",
       "status": "partial",
-      "discovered": 240,
-      "accepted": 2,
+      "discovered": 225,
+      "accepted": 1,
       "warnings": [
-        "article fetch failed: https://www.ema.europa.eu/en/medicines/human/EPAR/wegovy (FetchError)",
-        "article fetch failed: https://www.ema.europa.eu/en/medicines/human/EPAR/victoza (FetchError)"
+        "article fetch failed: https://www.ema.europa.eu/en/medicines/human/EPAR/wegovy (FetchError)"
       ]
     },
     {
@@ -52,7 +51,7 @@
       "region": "EU",
       "url": "https://www.ema.europa.eu/en/news.xml",
       "status": "ok",
-      "discovered": 8,
+      "discovered": 7,
       "accepted": 0,
       "warnings": []
     },
@@ -63,7 +62,7 @@
       "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
       "status": "ok",
       "discovered": 176,
-      "accepted": 52,
+      "accepted": 44,
       "warnings": []
     },
     {
@@ -170,8 +169,8 @@
       "region": "Global",
       "url": "https://www.novonordisk.com/bin/nncorp/news-search",
       "status": "ok",
-      "discovered": 3,
-      "accepted": 3,
+      "discovered": 2,
+      "accepted": 2,
       "warnings": []
     },
     {
@@ -200,18 +199,8 @@
   ],
   "review_queue": [
     {
-      "title": "Human medicines European public assessment report (EPAR): Victoza, liraglutide, Date of authorisation: 30/06/2009, Revision: 26, Status: Authorised",
-      "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/victoza",
-      "reason": "full article or abstract unavailable; retry next run"
-    },
-    {
       "title": "Human medicines European public assessment report (EPAR): Wegovy, semaglutide, Date of authorisation: 06/01/2022, Revision: 20, Status: Authorised",
       "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/wegovy",
-      "reason": "full article or abstract unavailable; retry next run"
-    },
-    {
-      "title": "GLP-1s and criminality: US trial will test whether semaglutide can fight crime.",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42901618",
       "reason": "full article or abstract unavailable; retry next run"
     }
   ]
