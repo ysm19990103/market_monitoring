@@ -46,12 +46,15 @@ jobs:
         id: collect
         env:
           LOOKBACK_DAYS: ${{ inputs.lookback_days || '14' }}
-        run: incretin-watch --lookback-days "$LOOKBACK_DAYS" --analysis rules
+        run: |
+          # Do not upload previous-run aliases if the new collection fails.
+          rm -f reports/latest.md reports/latest.json reports/latest.csv reports/coverage.json
+          incretin-watch --lookback-days "$LOOKBACK_DAYS" --analysis rules
       - name: Show report
         if: steps.collect.outcome == 'success'
         run: head -c 900000 reports/latest.md >> "$GITHUB_STEP_SUMMARY"
       - name: Upload report and source health
-        if: always()
+        if: always() && (steps.collect.outcome == 'success' || steps.collect.outcome == 'failure')
         uses: actions/upload-artifact@v4
         with:
           name: incretin-report-${{ github.run_id }}-${{ github.run_attempt }}

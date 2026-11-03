@@ -1,12 +1,15 @@
 from __future__ import annotations
 
 import json
+import re
 import socket
 import time
 from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.parse import parse_qsl, urlsplit
 from urllib.request import HTTPRedirectHandler, Request, build_opener
+
+from bs4 import BeautifulSoup
 
 from .common import digest, load_json, write_json
 
@@ -31,6 +34,21 @@ def failure_details(error: Exception) -> dict:
 def public_error(error: Exception) -> str:
     info = failure_details(error)
     return info["failure_type"] + (f" (HTTP {info['http_status']})" if "http_status" in info else "")
+
+
+def reject_block_page(body: bytes) -> None:
+    """Stop on explicit challenges, including HTTP 200/503 response bodies."""
+    if body.startswith(b"%PDF") or re.search(br"<(?:rss|feed|rdf:RDF)\b", body[:500], re.I):
+        return
+    if b"<" not in body[:200]:
+        if re.fullmatch(br"\s*(?:access denied|forbidden|verify (?:that )?you are human)[.!\s]*", body, re.I):
+            raise FetchError("access challenge; manual review required", "access_restricted")
+        return
+    soup = BeautifulSoup(body, "html.parser")
+    headings = " ".join(n.get_text(" ", strip=True) for n in soup.select("title,h1"))
+    if (re.search(r"verify (?:that )?you are human|checking your browser|just a moment|access denied|^forbidden$", headings, re.I)
+            or soup.select_one("form#challenge-form, #cf-challenge-running, .g-recaptcha, .h-captcha")):
+        raise FetchError("access challenge; manual review required", "access_restricted")
 
 
 def allowed_url(url: str, domains: list[str]) -> bool:
@@ -79,13 +97,18 @@ class Client:
                     body = r.read(8_000_001)
                     if len(body) > 8_000_000:
                         raise FetchError("response exceeds 8 MB limit", "invalid_response")
+                    reject_block_page(body)
                     raw.write_bytes(body)
                     mime = r.headers.get("Content-Type", "")
                     write_json(meta, {"etag": r.headers.get("ETag"), "modified": r.headers.get("Last-Modified"), "mime": mime})
                     return body, mime
             except HTTPError as e:
                 if e.code == 304 and raw.exists():
-                    return raw.read_bytes(), prior.get("mime", "")
+                    cached = raw.read_bytes()
+                    reject_block_page(cached)
+                    return cached, prior.get("mime", "")
+                if e.code in (500, 502, 503, 504):
+                    reject_block_page(e.read(16_000))
                 category = ("access_restricted" if e.code in (401, 403, 407, 412, 451) else
                             "rate_limited" if e.code == 429 else
                             "http_not_found" if e.code in (404, 410) else

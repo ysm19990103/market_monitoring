@@ -196,6 +196,24 @@ class RequestTests(unittest.TestCase):
         self.assertEqual(sleep.call_count, 2)
         self.assertEqual(caught.exception.category, "http_server_error")
 
+    def test_503_challenge_is_not_retried_as_a_server_failure(self):
+        for body in (b"Access Denied", b"<html><title>Just a moment</title></html>"):
+            with self.subTest(body=body):
+                self.client.opener.reset_mock()
+                self.client.opener.open.side_effect = HTTPError(self.url, 503, "Unavailable", {}, io.BytesIO(body))
+                with patch("incretin_watch.http.time.sleep") as sleep, self.assertRaises(FetchError) as caught:
+                    self.client.get(self.url)
+                self.assertEqual(caught.exception.category, "access_restricted")
+                self.assertEqual(self.client.opener.open.call_count, 1)
+                sleep.assert_not_called()
+
+    def test_rejected_source_url_is_not_published_in_diagnostics(self):
+        source = dict(SOURCES["fda_press"], url="https://www.fda.gov/a?api_key=private-fixture")
+        _, health = collect_source(source, CONFIG, self.client, "2026-10-21", "2026-11-03")
+        self.assertNotIn("private-fixture", json.dumps(health))
+        self.assertEqual(health["failure_type"], "policy_rejected")
+        self.client.opener.open.assert_not_called()
+
     def test_long_retry_after_is_not_shortened(self):
         self.client.opener.open.side_effect = HTTPError(self.url, 503, "Unavailable", {"Retry-After": "60"}, io.BytesIO())
         with patch("incretin_watch.http.time.sleep") as sleep, self.assertRaises(FetchError):

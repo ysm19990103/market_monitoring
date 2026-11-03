@@ -12,18 +12,7 @@ from bs4 import BeautifulSoup
 from pypdf import PdfReader
 
 from .common import canonical_url, compact, parse_date, relevant
-from .http import Client, FetchError, allowed_url, failure_details, public_error
-
-
-def reject_block_page(body: bytes) -> None:
-    """Recognize explicit access challenges, including an HTTP 200 challenge page."""
-    if b"<" not in body[:200] or re.search(br"<(?:rss|feed|rdf:RDF)\b", body[:500], re.I):
-        return
-    soup = BeautifulSoup(body, "html.parser")
-    headings = " ".join(n.get_text(" ", strip=True) for n in soup.select("title,h1"))
-    if (re.search(r"verify (?:that )?you are human|checking your browser|just a moment|access denied|^forbidden$", headings, re.I)
-            or soup.select_one("form#challenge-form, #cf-challenge-running, .g-recaptcha, .h-captcha")):
-        raise FetchError("access challenge; manual review required", "access_restricted")
+from .http import Client, FetchError, allowed_url, failure_details, public_error, reject_block_page
 
 
 def extract_page(body: bytes, mime: str) -> dict:
@@ -304,7 +293,7 @@ def collect_source(source: dict, config: dict, client: Client, since: str, until
                     article, mime = client.get(r["url"])
                     page = extract_page(article, mime)
                     if len(page["text"]) < 120:
-                        raise FetchError("article body missing or too short")
+                        raise FetchError("article body missing or too short", "invalid_response")
                     r["text"] = page["text"]
                     for field in ("published_date", "modified_date"):
                         r[field] = page.get(field) or r.get(field)
